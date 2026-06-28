@@ -1,0 +1,120 @@
+.class public final Lkotlin/collections/p$n;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lkotlin/sequences/m;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lkotlin/collections/p;->J5([J)Lkotlin/sequences/m;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lkotlin/sequences/m<",
+        "Ljava/lang/Long;",
+        ">;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/i0;
+    d1 = {
+        "\u0000\u0011\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010(\n\u0000*\u0001\u0000\u0008\n\u0018\u00002\u0008\u0012\u0004\u0012\u00028\u00000\u0001J\u000f\u0010\u0002\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u0003H\u0096\u0002\u00a8\u0006\u0004\u00b8\u0006\u0000"
+    }
+    d2 = {
+        "kotlin/sequences/SequencesKt__SequencesKt$Sequence$1",
+        "Lkotlin/sequences/Sequence;",
+        "iterator",
+        "",
+        "kotlin-stdlib"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x9,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+.annotation build Lkotlin/jvm/internal/r1;
+    value = {
+        "SMAP\nSequences.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Sequences.kt\nkotlin/sequences/SequencesKt__SequencesKt$Sequence$1\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n*L\n1#1,680:1\n24080#2:681\n*E\n"
+    }
+.end annotation
+
+
+# instance fields
+.field final synthetic a:[J
+
+
+# direct methods
+.method public constructor <init>([J)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lkotlin/collections/p$n;->a:[J
+
+    .line 2
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    .line 5
+    .line 6
+    return-void
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+    .line 17
+    .line 18
+    .line 19
+    .line 20
+    .line 21
+    .line 22
+    .line 23
+    .line 24
+    .line 25
+    .line 26
+    .line 27
+.end method
+
+
+# virtual methods
+.method public iterator()Ljava/util/Iterator;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Iterator<",
+            "Ljava/lang/Long;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation build Lp4/l;
+    .end annotation
+
+    iget-object v0, p0, Lkotlin/collections/p$n;->a:[J
+
+    invoke-static {v0}, Lkotlin/jvm/internal/j;->g([J)Lkotlin/collections/t0;
+
+    move-result-object v0
+
+    return-object v0
+.end method

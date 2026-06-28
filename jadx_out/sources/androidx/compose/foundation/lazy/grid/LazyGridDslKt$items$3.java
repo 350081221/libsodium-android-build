@@ -1,0 +1,34 @@
+package androidx.compose.foundation.lazy.grid;
+
+import java.util.List;
+import kotlin.i0;
+import kotlin.jvm.internal.n0;
+import kotlin.jvm.internal.r1;
+import p4.l;
+import v3.p;
+
+@i0(d1 = {"\u0000\u0016\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0002\u0010\u0000\u001a\u00020\u0001\"\u0004\b\u0000\u0010\u0002*\u00020\u00032\u0006\u0010\u0004\u001a\u00020\u0005H\n¢\u0006\u0004\b\u0006\u0010\u0007"}, d2 = {"<anonymous>", "Landroidx/compose/foundation/lazy/grid/GridItemSpan;", "T", "Landroidx/compose/foundation/lazy/grid/LazyGridItemSpanScope;", "it", "", "invoke-_-orMbw", "(Landroidx/compose/foundation/lazy/grid/LazyGridItemSpanScope;I)J"}, k = 3, mv = {1, 8, 0}, xi = 176)
+@r1({"SMAP\nLazyGridDsl.kt\nKotlin\n*S Kotlin\n*F\n+ 1 LazyGridDsl.kt\nandroidx/compose/foundation/lazy/grid/LazyGridDslKt$items$3\n*L\n1#1,563:1\n*E\n"})
+/* loaded from: classes.dex */
+public final class LazyGridDslKt$items$3 extends n0 implements p<LazyGridItemSpanScope, Integer, GridItemSpan> {
+    final /* synthetic */ List<T> $items;
+    final /* synthetic */ p<LazyGridItemSpanScope, T, GridItemSpan> $span;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    /* JADX WARN: Multi-variable type inference failed */
+    public LazyGridDslKt$items$3(p<? super LazyGridItemSpanScope, ? super T, GridItemSpan> pVar, List<? extends T> list) {
+        super(2);
+        this.$span = pVar;
+        this.$items = list;
+    }
+
+    @Override // v3.p
+    public /* bridge */ /* synthetic */ GridItemSpan invoke(LazyGridItemSpanScope lazyGridItemSpanScope, Integer num) {
+        return GridItemSpan.m670boximpl(m679invoke_orMbw(lazyGridItemSpanScope, num.intValue()));
+    }
+
+    /* renamed from: invoke-_-orMbw, reason: not valid java name */
+    public final long m679invoke_orMbw(@l LazyGridItemSpanScope lazyGridItemSpanScope, int i5) {
+        return this.$span.invoke(lazyGridItemSpanScope, this.$items.get(i5)).m677unboximpl();
+    }
+}

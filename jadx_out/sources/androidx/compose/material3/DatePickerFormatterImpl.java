@@ -1,0 +1,86 @@
+package androidx.compose.material3;
+
+import androidx.compose.runtime.Immutable;
+import com.bytedance.sdk.openadsdk.downloadnew.core.TTDownloadField;
+import java.util.LinkedHashMap;
+import java.util.Locale;
+import java.util.Map;
+
+@kotlin.i0(d1 = {"\u0000>\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0010%\n\u0002\u0010\u0000\n\u0002\b\u0005\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\b\n\u0000\b\u0003\u0018\u00002\u00020\u0001B\u001d\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0003¢\u0006\u0002\u0010\u0006J\u0013\u0010\u000e\u001a\u00020\u000f2\b\u0010\u0010\u001a\u0004\u0018\u00010\tH\u0096\u0002J-\u0010\u0011\u001a\u0004\u0018\u00010\u00032\b\u0010\u0012\u001a\u0004\u0018\u00010\u00132\n\u0010\u0014\u001a\u00060\u0015j\u0002`\u00162\u0006\u0010\u0017\u001a\u00020\u000fH\u0016¢\u0006\u0002\u0010\u0018J%\u0010\u0019\u001a\u0004\u0018\u00010\u00032\b\u0010\u001a\u001a\u0004\u0018\u00010\u00132\n\u0010\u0014\u001a\u00060\u0015j\u0002`\u0016H\u0016¢\u0006\u0002\u0010\u001bJ\b\u0010\u001c\u001a\u00020\u001dH\u0016R\u001a\u0010\u0007\u001a\u000e\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\t0\bX\u0082\u0004¢\u0006\u0002\n\u0000R\u0011\u0010\u0005\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\n\u0010\u000bR\u0011\u0010\u0004\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\f\u0010\u000bR\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\r\u0010\u000b¨\u0006\u001e"}, d2 = {"Landroidx/compose/material3/DatePickerFormatterImpl;", "Landroidx/compose/material3/DatePickerFormatter;", "yearSelectionSkeleton", "", "selectedDateSkeleton", "selectedDateDescriptionSkeleton", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", "formatterCache", "", "", "getSelectedDateDescriptionSkeleton", "()Ljava/lang/String;", "getSelectedDateSkeleton", "getYearSelectionSkeleton", "equals", "", "other", "formatDate", "dateMillis", "", "locale", "Ljava/util/Locale;", "Landroidx/compose/material3/CalendarLocale;", "forContentDescription", "(Ljava/lang/Long;Ljava/util/Locale;Z)Ljava/lang/String;", "formatMonthYear", "monthMillis", "(Ljava/lang/Long;Ljava/util/Locale;)Ljava/lang/String;", TTDownloadField.TT_HASHCODE, "", "material3_release"}, k = 1, mv = {1, 8, 0}, xi = 48)
+@Immutable
+/* loaded from: classes.dex */
+final class DatePickerFormatterImpl implements DatePickerFormatter {
+
+    @p4.l
+    private final Map<String, Object> formatterCache = new LinkedHashMap();
+
+    @p4.l
+    private final String selectedDateDescriptionSkeleton;
+
+    @p4.l
+    private final String selectedDateSkeleton;
+
+    @p4.l
+    private final String yearSelectionSkeleton;
+
+    public DatePickerFormatterImpl(@p4.l String str, @p4.l String str2, @p4.l String str3) {
+        this.yearSelectionSkeleton = str;
+        this.selectedDateSkeleton = str2;
+        this.selectedDateDescriptionSkeleton = str3;
+    }
+
+    public boolean equals(@p4.m Object obj) {
+        if (!(obj instanceof DatePickerFormatterImpl)) {
+            return false;
+        }
+        DatePickerFormatterImpl datePickerFormatterImpl = (DatePickerFormatterImpl) obj;
+        if (!kotlin.jvm.internal.l0.g(this.yearSelectionSkeleton, datePickerFormatterImpl.yearSelectionSkeleton) || !kotlin.jvm.internal.l0.g(this.selectedDateSkeleton, datePickerFormatterImpl.selectedDateSkeleton) || !kotlin.jvm.internal.l0.g(this.selectedDateDescriptionSkeleton, datePickerFormatterImpl.selectedDateDescriptionSkeleton)) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override // androidx.compose.material3.DatePickerFormatter
+    @p4.m
+    public String formatDate(@p4.m Long l5, @p4.l Locale locale, boolean z4) {
+        String str;
+        if (l5 == null) {
+            return null;
+        }
+        long longValue = l5.longValue();
+        if (z4) {
+            str = this.selectedDateDescriptionSkeleton;
+        } else {
+            str = this.selectedDateSkeleton;
+        }
+        return CalendarModel_androidKt.formatWithSkeleton(longValue, str, locale, this.formatterCache);
+    }
+
+    @Override // androidx.compose.material3.DatePickerFormatter
+    @p4.m
+    public String formatMonthYear(@p4.m Long l5, @p4.l Locale locale) {
+        if (l5 == null) {
+            return null;
+        }
+        return CalendarModel_androidKt.formatWithSkeleton(l5.longValue(), this.yearSelectionSkeleton, locale, this.formatterCache);
+    }
+
+    @p4.l
+    public final String getSelectedDateDescriptionSkeleton() {
+        return this.selectedDateDescriptionSkeleton;
+    }
+
+    @p4.l
+    public final String getSelectedDateSkeleton() {
+        return this.selectedDateSkeleton;
+    }
+
+    @p4.l
+    public final String getYearSelectionSkeleton() {
+        return this.yearSelectionSkeleton;
+    }
+
+    public int hashCode() {
+        return (((this.yearSelectionSkeleton.hashCode() * 31) + this.selectedDateSkeleton.hashCode()) * 31) + this.selectedDateDescriptionSkeleton.hashCode();
+    }
+}

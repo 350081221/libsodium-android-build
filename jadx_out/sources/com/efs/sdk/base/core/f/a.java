@@ -1,0 +1,29 @@
+package com.efs.sdk.base.core.f;
+
+import android.os.Handler;
+import android.os.Message;
+import androidx.annotation.NonNull;
+import com.efs.sdk.base.core.controller.ControllerCenter;
+import org.osmdroid.tileprovider.constants.OpenStreetMapTileProviderConstants;
+
+/* loaded from: classes2.dex */
+public abstract class a extends Handler {
+
+    /* renamed from: a, reason: collision with root package name */
+    public ControllerCenter f6605a;
+
+    /* JADX INFO: Access modifiers changed from: package-private */
+    public a() {
+        super(com.efs.sdk.base.core.util.concurrent.a.f6647a.getLooper());
+        sendEmptyMessageDelayed(0, OpenStreetMapTileProviderConstants.ONE_MINUTE);
+    }
+
+    abstract void a();
+
+    @Override // android.os.Handler
+    public void handleMessage(@NonNull Message message) {
+        super.handleMessage(message);
+        a();
+        sendEmptyMessageDelayed(0, OpenStreetMapTileProviderConstants.ONE_MINUTE);
+    }
+}

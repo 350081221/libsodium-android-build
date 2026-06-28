@@ -1,0 +1,32 @@
+package androidx.compose.foundation.text;
+
+import androidx.compose.ui.geometry.Offset;
+import androidx.compose.ui.geometry.OffsetKt;
+import androidx.compose.ui.geometry.Rect;
+import kotlin.i0;
+
+@i0(d1 = {"\u0000\u0010\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\u001a\u001e\u0010\u0000\u001a\u00020\u0001*\u00020\u00012\u0006\u0010\u0002\u001a\u00020\u0003H\u0002ø\u0001\u0000¢\u0006\u0004\b\u0004\u0010\u0005\u0082\u0002\u0007\n\u0005\b¡\u001e0\u0001¨\u0006\u0006"}, d2 = {"coerceIn", "Landroidx/compose/ui/geometry/Offset;", "rect", "Landroidx/compose/ui/geometry/Rect;", "coerceIn-3MmeM6k", "(JLandroidx/compose/ui/geometry/Rect;)J", "foundation_release"}, k = 2, mv = {1, 8, 0}, xi = 48)
+/* loaded from: classes.dex */
+public final class TextLayoutResultProxyKt {
+    /* JADX INFO: Access modifiers changed from: private */
+    /* renamed from: coerceIn-3MmeM6k, reason: not valid java name */
+    public static final long m934coerceIn3MmeM6k(long j5, Rect rect) {
+        float m3493getXimpl;
+        float m3494getYimpl;
+        if (Offset.m3493getXimpl(j5) < rect.getLeft()) {
+            m3493getXimpl = rect.getLeft();
+        } else if (Offset.m3493getXimpl(j5) > rect.getRight()) {
+            m3493getXimpl = rect.getRight();
+        } else {
+            m3493getXimpl = Offset.m3493getXimpl(j5);
+        }
+        if (Offset.m3494getYimpl(j5) < rect.getTop()) {
+            m3494getYimpl = rect.getTop();
+        } else if (Offset.m3494getYimpl(j5) > rect.getBottom()) {
+            m3494getYimpl = rect.getBottom();
+        } else {
+            m3494getYimpl = Offset.m3494getYimpl(j5);
+        }
+        return OffsetKt.Offset(m3493getXimpl, m3494getYimpl);
+    }
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" style="@style/RitDetailContent">
+        <TextView android:textColor="#ff000000" android:id="@id/radio_bar_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="未指定" android:layout_weight="1.0" />
+        <RadioButton android:id="@id/radio_bar_button" android:background="@drawable/radio_selector" android:clickable="false" android:layout_width="16.0dip" android:layout_height="16.0dip" android:button="@null" />
+    </LinearLayout>
+    <View android:background="#22161823" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/radio_bar_expand" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

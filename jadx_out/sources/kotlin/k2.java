@@ -1,0 +1,13 @@
+package kotlin;
+
+@i0(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\bÀ\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002¨\u0006\u0003"}, d2 = {"Lkotlin/UNINITIALIZED_VALUE;", "", "()V", "kotlin-stdlib"}, k = 1, mv = {1, 9, 0}, xi = 48)
+/* loaded from: classes3.dex */
+public final class k2 {
+
+    /* renamed from: a, reason: collision with root package name */
+    @p4.l
+    public static final k2 f19493a = new k2();
+
+    private k2() {
+    }
+}

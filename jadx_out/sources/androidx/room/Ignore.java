@@ -1,0 +1,16 @@
+package androidx.room;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+import kotlin.i0;
+
+@Target({ElementType.FIELD, ElementType.METHOD, ElementType.CONSTRUCTOR})
+@n3.e(n3.a.BINARY)
+@i0(d1 = {"\u0000\n\n\u0002\u0018\u0002\n\u0002\u0010\u001b\n\u0000\b\u0087\u0002\u0018\u00002\u00020\u0001B\u0000¨\u0006\u0002"}, d2 = {"Landroidx/room/Ignore;", "", "room-common"}, k = 1, mv = {1, 8, 0}, xi = 48)
+@n3.f(allowedTargets = {n3.b.FUNCTION, n3.b.FIELD, n3.b.CONSTRUCTOR, n3.b.PROPERTY_GETTER})
+@Retention(RetentionPolicy.CLASS)
+/* loaded from: classes2.dex */
+public @interface Ignore {
+}

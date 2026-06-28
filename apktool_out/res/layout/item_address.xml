@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/lay_address" android:background="@drawable/shape_bg_white_radius_6" android:padding="@dimen/dp16" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="6.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textColor="@color/gray3" android:ellipsize="middle" android:id="@id/tv_address" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+    <TextView android:textSize="14.0sp" android:textColor="@color/grayA" android:ellipsize="middle" android:id="@id/tv_lat" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp8" android:singleLine="true" />
+    <TextView android:textSize="14.0sp" android:textColor="@color/grayA" android:ellipsize="middle" android:id="@id/tv_lng" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp8" android:singleLine="true" />
+</LinearLayout>

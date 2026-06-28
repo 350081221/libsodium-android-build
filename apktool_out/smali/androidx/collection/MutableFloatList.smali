@@ -1,0 +1,1981 @@
+.class public final Landroidx/collection/MutableFloatList;
+.super Landroidx/collection/FloatList;
+.source "SourceFile"
+
+
+# annotations
+.annotation runtime Lkotlin/i0;
+    d1 = {
+        "\u0000&\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0007\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0008\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0014\n\u0002\u0008\u0019\u0018\u00002\u00020\u0001B\u0011\u0012\u0008\u0008\u0002\u0010\u001f\u001a\u00020\u0006\u00a2\u0006\u0004\u0008 \u0010!J\u000e\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002J\u0018\u0010\u0005\u001a\u00020\u00082\u0008\u0008\u0001\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u0002J\u0018\u0010\u000b\u001a\u00020\u00042\u0008\u0008\u0001\u0010\u0007\u001a\u00020\u00062\u0006\u0010\n\u001a\u00020\tJ\u0018\u0010\u000b\u001a\u00020\u00042\u0008\u0008\u0001\u0010\u0007\u001a\u00020\u00062\u0006\u0010\n\u001a\u00020\u0001J\u000e\u0010\u000b\u001a\u00020\u00042\u0006\u0010\n\u001a\u00020\u0001J\u000e\u0010\u000b\u001a\u00020\u00042\u0006\u0010\n\u001a\u00020\tJ\u0011\u0010\u000c\u001a\u00020\u00082\u0006\u0010\n\u001a\u00020\u0001H\u0086\u0002J\u0011\u0010\u000c\u001a\u00020\u00082\u0006\u0010\n\u001a\u00020\tH\u0086\u0002J\u0006\u0010\r\u001a\u00020\u0008J\u0010\u0010\u000f\u001a\u00020\u00082\u0008\u0008\u0002\u0010\u000e\u001a\u00020\u0006J\u000e\u0010\u0011\u001a\u00020\u00082\u0006\u0010\u0010\u001a\u00020\u0006J\u0011\u0010\u000c\u001a\u00020\u00082\u0006\u0010\u0003\u001a\u00020\u0002H\u0086\nJ\u0011\u0010\u0012\u001a\u00020\u00082\u0006\u0010\u0003\u001a\u00020\u0002H\u0086\nJ\u000e\u0010\u0013\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002J\u000e\u0010\u0014\u001a\u00020\u00042\u0006\u0010\n\u001a\u00020\tJ\u000e\u0010\u0014\u001a\u00020\u00042\u0006\u0010\n\u001a\u00020\u0001J\u0011\u0010\u0012\u001a\u00020\u00082\u0006\u0010\n\u001a\u00020\tH\u0086\u0002J\u0011\u0010\u0012\u001a\u00020\u00082\u0006\u0010\n\u001a\u00020\u0001H\u0086\u0002J\u0010\u0010\u0015\u001a\u00020\u00022\u0008\u0008\u0001\u0010\u0007\u001a\u00020\u0006J\u001a\u0010\u0018\u001a\u00020\u00082\u0008\u0008\u0001\u0010\u0016\u001a\u00020\u00062\u0008\u0008\u0001\u0010\u0017\u001a\u00020\u0006J\u000e\u0010\u0019\u001a\u00020\u00042\u0006\u0010\n\u001a\u00020\tJ\u000e\u0010\u0019\u001a\u00020\u00042\u0006\u0010\n\u001a\u00020\u0001J\u001b\u0010\u001a\u001a\u00020\u00022\u0008\u0008\u0001\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u0002H\u0086\u0002J\u0006\u0010\u001b\u001a\u00020\u0008J\u0006\u0010\u001c\u001a\u00020\u0008R\u0012\u0010\u0010\u001a\u00020\u00068\u00c6\u0002\u00a2\u0006\u0006\u001a\u0004\u0008\u001d\u0010\u001e\u00a8\u0006\""
+    }
+    d2 = {
+        "Landroidx/collection/MutableFloatList;",
+        "Landroidx/collection/FloatList;",
+        "",
+        "element",
+        "",
+        "add",
+        "",
+        "index",
+        "Lkotlin/r2;",
+        "",
+        "elements",
+        "addAll",
+        "plusAssign",
+        "clear",
+        "minCapacity",
+        "trim",
+        "capacity",
+        "ensureCapacity",
+        "minusAssign",
+        "remove",
+        "removeAll",
+        "removeAt",
+        "start",
+        "end",
+        "removeRange",
+        "retainAll",
+        "set",
+        "sort",
+        "sortDescending",
+        "getCapacity",
+        "()I",
+        "initialCapacity",
+        "<init>",
+        "(I)V",
+        "collection"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+.end annotation
+
+.annotation build Lkotlin/jvm/internal/r1;
+    value = {
+        "SMAP\nFloatList.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FloatList.kt\nandroidx/collection/MutableFloatList\n+ 2 FloatList.kt\nandroidx/collection/FloatList\n+ 3 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n*L\n1#1,969:1\n549#1:970\n70#2:971\n253#2,6:974\n70#2:980\n70#2:981\n70#2:982\n70#2:989\n70#2:990\n13614#3,2:972\n1687#3,6:983\n*S KotlinDebug\n*F\n+ 1 FloatList.kt\nandroidx/collection/MutableFloatList\n*L\n692#1:970\n753#1:971\n772#1:974,6\n783#1:980\n787#1:981\n834#1:982\n850#1:989\n869#1:990\n763#1:972,2\n836#1:983,6\n*E\n"
+    }
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 3
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    invoke-direct {p0, v2, v0, v1}, Landroidx/collection/MutableFloatList;-><init>(IILkotlin/jvm/internal/w;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(I)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 2
+    invoke-direct {p0, p1, v0}, Landroidx/collection/FloatList;-><init>(ILkotlin/jvm/internal/w;)V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(IILkotlin/jvm/internal/w;)V
+    .locals 0
+
+    and-int/lit8 p2, p2, 0x1
+
+    if-eqz p2, :cond_0
+
+    const/16 p1, 0x10
+
+    .line 1
+    :cond_0
+    invoke-direct {p0, p1}, Landroidx/collection/MutableFloatList;-><init>(I)V
+
+    return-void
+.end method
+
+.method public static synthetic trim$default(Landroidx/collection/MutableFloatList;IILjava/lang/Object;)V
+    .locals 0
+
+    and-int/lit8 p2, p2, 0x1
+
+    if-eqz p2, :cond_0
+
+    iget p1, p0, Landroidx/collection/FloatList;->_size:I
+
+    :cond_0
+    invoke-virtual {p0, p1}, Landroidx/collection/MutableFloatList;->trim(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final add(IF)V
+    .locals 4
+    .param p1    # I
+        .annotation build Landroidx/annotation/IntRange;
+            from = 0x0L
+        .end annotation
+    .end param
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    if-ltz p1, :cond_0
+
+    .line 4
+    iget v2, p0, Landroidx/collection/FloatList;->_size:I
+
+    if-gt p1, v2, :cond_0
+
+    move v0, v1
+
+    :cond_0
+    if-eqz v0, :cond_2
+
+    .line 5
+    iget v0, p0, Landroidx/collection/FloatList;->_size:I
+
+    add-int/2addr v0, v1
+
+    invoke-virtual {p0, v0}, Landroidx/collection/MutableFloatList;->ensureCapacity(I)V
+
+    .line 6
+    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
+
+    .line 7
+    iget v2, p0, Landroidx/collection/FloatList;->_size:I
+
+    if-eq p1, v2, :cond_1
+
+    add-int/lit8 v3, p1, 0x1
+
+    .line 8
+    invoke-static {v0, v0, v3, p1, v2}, Lkotlin/collections/l;->y0([F[FIII)[F
+
+    .line 9
+    :cond_1
+    aput p2, v0, p1
+
+    .line 10
+    iget p1, p0, Landroidx/collection/FloatList;->_size:I
+
+    add-int/2addr p1, v1
+
+    iput p1, p0, Landroidx/collection/FloatList;->_size:I
+
+    return-void
+
+    .line 11
+    :cond_2
+    new-instance p2, Ljava/lang/IndexOutOfBoundsException;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "Index "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, " must be in 0.."
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget p1, p0, Landroidx/collection/FloatList;->_size:I
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+.end method
+
+.method public final add(F)Z
+    .locals 3
+
+    .line 1
+    iget v0, p0, Landroidx/collection/FloatList;->_size:I
+
+    const/4 v1, 0x1
+
+    add-int/2addr v0, v1
+
+    invoke-virtual {p0, v0}, Landroidx/collection/MutableFloatList;->ensureCapacity(I)V
+
+    .line 2
+    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
+
+    iget v2, p0, Landroidx/collection/FloatList;->_size:I
+
+    aput p1, v0, v2
+
+    add-int/2addr v2, v1
+
+    .line 3
+    iput v2, p0, Landroidx/collection/FloatList;->_size:I
+
+    return v1
+.end method
+
+.method public final addAll(ILandroidx/collection/FloatList;)Z
+    .locals 5
+    .param p1    # I
+        .annotation build Landroidx/annotation/IntRange;
+            from = 0x0L
+        .end annotation
+    .end param
+    .param p2    # Landroidx/collection/FloatList;
+        .annotation build Lp4/l;
+        .end annotation
+    .end param
+
+    const-string v0, "elements"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    if-ltz p1, :cond_0
+
+    .line 11
+    iget v2, p0, Landroidx/collection/FloatList;->_size:I
+
+    if-gt p1, v2, :cond_0
+
+    move v2, v0
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v1
+
+    :goto_0
+    if-eqz v2, :cond_3
+
+    .line 12
+    invoke-virtual {p2}, Landroidx/collection/FloatList;->isEmpty()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    return v1
+
+    .line 13
+    :cond_1
+    iget v2, p0, Landroidx/collection/FloatList;->_size:I
+
+    iget v3, p2, Landroidx/collection/FloatList;->_size:I
+
+    add-int/2addr v2, v3
+
+    invoke-virtual {p0, v2}, Landroidx/collection/MutableFloatList;->ensureCapacity(I)V
+
+    .line 14
+    iget-object v2, p0, Landroidx/collection/FloatList;->content:[F
+
+    .line 15
+    iget v3, p0, Landroidx/collection/FloatList;->_size:I
+
+    if-eq p1, v3, :cond_2
+
+    .line 16
+    iget v4, p2, Landroidx/collection/FloatList;->_size:I
+
+    add-int/2addr v4, p1
+
+    .line 17
+    invoke-static {v2, v2, v4, p1, v3}, Lkotlin/collections/l;->y0([F[FIII)[F
+
+    .line 18
+    :cond_2
+    iget-object v3, p2, Landroidx/collection/FloatList;->content:[F
+
+    .line 19
+    iget v4, p2, Landroidx/collection/FloatList;->_size:I
+
+    .line 20
+    invoke-static {v3, v2, p1, v1, v4}, Lkotlin/collections/l;->y0([F[FIII)[F
+
+    .line 21
+    iget p1, p0, Landroidx/collection/FloatList;->_size:I
+
+    iget p2, p2, Landroidx/collection/FloatList;->_size:I
+
+    add-int/2addr p1, p2
+
+    iput p1, p0, Landroidx/collection/FloatList;->_size:I
+
+    return v0
+
+    .line 22
+    :cond_3
+    new-instance p2, Ljava/lang/IndexOutOfBoundsException;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "Index "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, " must be in 0.."
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget p1, p0, Landroidx/collection/FloatList;->_size:I
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+.end method
+
+.method public final addAll(I[F)Z
+    .locals 9
+    .param p1    # I
+        .annotation build Landroidx/annotation/IntRange;
+            from = 0x0L
+        .end annotation
+    .end param
+    .param p2    # [F
+        .annotation build Lp4/l;
+        .end annotation
+    .end param
+
+    const-string v0, "elements"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    if-ltz p1, :cond_0
+
+    .line 1
+    iget v2, p0, Landroidx/collection/FloatList;->_size:I
+
+    if-gt p1, v2, :cond_0
+
+    move v2, v0
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v1
+
+    :goto_0
+    if-eqz v2, :cond_4
+
+    .line 2
+    array-length v2, p2
+
+    if-nez v2, :cond_1
+
+    move v2, v0
+
+    goto :goto_1
+
+    :cond_1
+    move v2, v1
+
+    :goto_1
+    if-eqz v2, :cond_2
+
+    return v1
+
+    .line 3
+    :cond_2
+    iget v1, p0, Landroidx/collection/FloatList;->_size:I
+
+    array-length v2, p2
+
+    add-int/2addr v1, v2
+
+    invoke-virtual {p0, v1}, Landroidx/collection/MutableFloatList;->ensureCapacity(I)V
+
+    .line 4
+    iget-object v3, p0, Landroidx/collection/FloatList;->content:[F
+
+    .line 5
+    iget v1, p0, Landroidx/collection/FloatList;->_size:I
+
+    if-eq p1, v1, :cond_3
+
+    .line 6
+    array-length v2, p2
+
+    add-int/2addr v2, p1
+
+    .line 7
+    invoke-static {v3, v3, v2, p1, v1}, Lkotlin/collections/l;->y0([F[FIII)[F
+
+    :cond_3
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/16 v7, 0xc
+
+    const/4 v8, 0x0
+
+    move-object v2, p2
+
+    move v4, p1
+
+    .line 8
+    invoke-static/range {v2 .. v8}, Lkotlin/collections/l;->H0([F[FIIIILjava/lang/Object;)[F
+
+    .line 9
+    iget p1, p0, Landroidx/collection/FloatList;->_size:I
+
+    array-length p2, p2
+
+    add-int/2addr p1, p2
+
+    iput p1, p0, Landroidx/collection/FloatList;->_size:I
+
+    return v0
+
+    .line 10
+    :cond_4
+    new-instance p2, Ljava/lang/IndexOutOfBoundsException;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "Index "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, " must be in 0.."
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget p1, p0, Landroidx/collection/FloatList;->_size:I
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+.end method
+
+.method public final addAll(Landroidx/collection/FloatList;)Z
+    .locals 1
+    .param p1    # Landroidx/collection/FloatList;
+        .annotation build Lp4/l;
+        .end annotation
+    .end param
+
+    const-string v0, "elements"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 23
+    iget v0, p0, Landroidx/collection/FloatList;->_size:I
+
+    invoke-virtual {p0, v0, p1}, Landroidx/collection/MutableFloatList;->addAll(ILandroidx/collection/FloatList;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final addAll([F)Z
+    .locals 1
+    .param p1    # [F
+        .annotation build Lp4/l;
+        .end annotation
+    .end param
+
+    const-string v0, "elements"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 24
+    iget v0, p0, Landroidx/collection/FloatList;->_size:I
+
+    invoke-virtual {p0, v0, p1}, Landroidx/collection/MutableFloatList;->addAll(I[F)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final clear()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Landroidx/collection/FloatList;->_size:I
+
+    return-void
+.end method
+
+.method public final ensureCapacity(I)V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
+
+    .line 2
+    .line 3
+    array-length v1, v0
+
+    .line 4
+    if-ge v1, p1, :cond_0
+
+    .line 5
+    .line 6
+    array-length v1, v0
+
+    .line 7
+    mul-int/lit8 v1, v1, 0x3
+
+    .line 8
+    .line 9
+    div-int/lit8 v1, v1, 0x2
+
+    .line 10
+    .line 11
+    invoke-static {p1, v1}, Ljava/lang/Math;->max(II)I
+
+    .line 12
+    .line 13
+    .line 14
+    move-result p1
+
+    .line 15
+    invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([FI)[F
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object p1
+
+    .line 19
+    const-string v0, "copyOf(this, newSize)"
+
+    .line 20
+    .line 21
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 22
+    .line 23
+    .line 24
+    iput-object p1, p0, Landroidx/collection/FloatList;->content:[F
+
+    .line 25
+    .line 26
+    :cond_0
+    return-void
+    .line 27
+    .line 28
+    .line 29
+    .line 30
+    .line 31
+    .line 32
+.end method
+
+.method public final getCapacity()I
+    .locals 1
+
+    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
+
+    array-length v0, v0
+
+    return v0
+.end method
+
+.method public final minusAssign(F)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Landroidx/collection/MutableFloatList;->remove(F)Z
+
+    return-void
+.end method
+
+.method public final minusAssign(Landroidx/collection/FloatList;)V
+    .locals 3
+    .param p1    # Landroidx/collection/FloatList;
+        .annotation build Lp4/l;
+        .end annotation
+    .end param
+
+    const-string v0, "elements"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 4
+    iget-object v0, p1, Landroidx/collection/FloatList;->content:[F
+
+    .line 5
+    iget p1, p1, Landroidx/collection/FloatList;->_size:I
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, p1, :cond_0
+
+    .line 6
+    aget v2, v0, v1
+
+    .line 7
+    invoke-virtual {p0, v2}, Landroidx/collection/MutableFloatList;->remove(F)Z
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final minusAssign([F)V
+    .locals 3
+    .param p1    # [F
+        .annotation build Lp4/l;
+        .end annotation
+    .end param
+
+    const-string v0, "elements"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 2
+    array-length v0, p1
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, v0, :cond_0
+
+    aget v2, p1, v1
+
+    .line 3
+    invoke-virtual {p0, v2}, Landroidx/collection/MutableFloatList;->remove(F)Z
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final plusAssign(F)V
+    .locals 0
+
+    .line 3
+    invoke-virtual {p0, p1}, Landroidx/collection/MutableFloatList;->add(F)Z
+
+    return-void
+.end method
+
+.method public final plusAssign(Landroidx/collection/FloatList;)V
+    .locals 1
+    .param p1    # Landroidx/collection/FloatList;
+        .annotation build Lp4/l;
+        .end annotation
+    .end param
+
+    const-string v0, "elements"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    iget v0, p0, Landroidx/collection/FloatList;->_size:I
+
+    invoke-virtual {p0, v0, p1}, Landroidx/collection/MutableFloatList;->addAll(ILandroidx/collection/FloatList;)Z
+
+    return-void
+.end method
+
+.method public final plusAssign([F)V
+    .locals 1
+    .param p1    # [F
+        .annotation build Lp4/l;
+        .end annotation
+    .end param
+
+    const-string v0, "elements"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 2
+    iget v0, p0, Landroidx/collection/FloatList;->_size:I
+
+    invoke-virtual {p0, v0, p1}, Landroidx/collection/MutableFloatList;->addAll(I[F)Z
+
+    return-void
+.end method
+
+.method public final remove(F)Z
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Landroidx/collection/FloatList;->indexOf(F)I
+
+    .line 2
+    .line 3
+    .line 4
+    move-result p1
+
+    .line 5
+    if-ltz p1, :cond_0
+
+    .line 6
+    .line 7
+    invoke-virtual {p0, p1}, Landroidx/collection/MutableFloatList;->removeAt(I)F
+
+    .line 8
+    .line 9
+    .line 10
+    const/4 p1, 0x1
+
+    .line 11
+    return p1
+
+    .line 12
+    :cond_0
+    const/4 p1, 0x0
+
+    .line 13
+    return p1
+    .line 14
+    .line 15
+    .line 16
+    .line 17
+    .line 18
+    .line 19
+    .line 20
+    .line 21
+    .line 22
+    .line 23
+    .line 24
+    .line 25
+    .line 26
+    .line 27
+    .line 28
+    .line 29
+    .line 30
+    .line 31
+    .line 32
+.end method
+
+.method public final removeAll(Landroidx/collection/FloatList;)Z
+    .locals 6
+    .param p1    # Landroidx/collection/FloatList;
+        .annotation build Lp4/l;
+        .end annotation
+    .end param
+
+    const-string v0, "elements"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 5
+    iget v0, p0, Landroidx/collection/FloatList;->_size:I
+
+    .line 6
+    iget v1, p1, Landroidx/collection/FloatList;->_size:I
+
+    const/4 v2, 0x1
+
+    sub-int/2addr v1, v2
+
+    const/4 v3, 0x0
+
+    if-ltz v1, :cond_0
+
+    move v4, v3
+
+    .line 7
+    :goto_0
+    invoke-virtual {p1, v4}, Landroidx/collection/FloatList;->get(I)F
+
+    move-result v5
+
+    invoke-virtual {p0, v5}, Landroidx/collection/MutableFloatList;->remove(F)Z
+
+    if-eq v4, v1, :cond_0
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_0
+
+    .line 8
+    :cond_0
+    iget p1, p0, Landroidx/collection/FloatList;->_size:I
+
+    if-eq v0, p1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    move v2, v3
+
+    :goto_1
+    return v2
+.end method
+
+.method public final removeAll([F)Z
+    .locals 5
+    .param p1    # [F
+        .annotation build Lp4/l;
+        .end annotation
+    .end param
+
+    const-string v0, "elements"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    iget v0, p0, Landroidx/collection/FloatList;->_size:I
+
+    .line 2
+    array-length v1, p1
+
+    const/4 v2, 0x0
+
+    move v3, v2
+
+    :goto_0
+    if-ge v3, v1, :cond_0
+
+    .line 3
+    aget v4, p1, v3
+
+    invoke-virtual {p0, v4}, Landroidx/collection/MutableFloatList;->remove(F)Z
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    .line 4
+    :cond_0
+    iget p1, p0, Landroidx/collection/FloatList;->_size:I
+
+    if-eq v0, p1, :cond_1
+
+    const/4 v2, 0x1
+
+    :cond_1
+    return v2
+.end method
+
+.method public final removeAt(I)F
+    .locals 4
+    .param p1    # I
+        .annotation build Landroidx/annotation/IntRange;
+            from = 0x0L
+        .end annotation
+    .end param
+
+    .line 1
+    const/4 v0, 0x0
+
+    .line 2
+    const/4 v1, 0x1
+
+    .line 3
+    if-ltz p1, :cond_0
+
+    .line 4
+    .line 5
+    iget v2, p0, Landroidx/collection/FloatList;->_size:I
+
+    .line 6
+    .line 7
+    if-ge p1, v2, :cond_0
+
+    .line 8
+    .line 9
+    move v0, v1
+
+    .line 10
+    :cond_0
+    if-eqz v0, :cond_2
+
+    .line 11
+    .line 12
+    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
+
+    .line 13
+    .line 14
+    aget v1, v0, p1
+
+    .line 15
+    .line 16
+    iget v2, p0, Landroidx/collection/FloatList;->_size:I
+
+    .line 17
+    .line 18
+    add-int/lit8 v3, v2, -0x1
+
+    .line 19
+    .line 20
+    if-eq p1, v3, :cond_1
+
+    .line 21
+    .line 22
+    add-int/lit8 v3, p1, 0x1
+
+    .line 23
+    .line 24
+    invoke-static {v0, v0, p1, v3, v2}, Lkotlin/collections/l;->y0([F[FIII)[F
+
+    .line 25
+    .line 26
+    .line 27
+    :cond_1
+    iget p1, p0, Landroidx/collection/FloatList;->_size:I
+
+    .line 28
+    .line 29
+    add-int/lit8 p1, p1, -0x1
+
+    .line 30
+    .line 31
+    iput p1, p0, Landroidx/collection/FloatList;->_size:I
+
+    .line 32
+    .line 33
+    return v1
+
+    .line 34
+    :cond_2
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+
+    .line 35
+    .line 36
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    .line 37
+    .line 38
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    .line 39
+    .line 40
+    .line 41
+    const-string v3, "Index "
+
+    .line 42
+    .line 43
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 44
+    .line 45
+    .line 46
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 47
+    .line 48
+    .line 49
+    const-string p1, " must be in 0.."
+
+    .line 50
+    .line 51
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 52
+    .line 53
+    .line 54
+    iget p1, p0, Landroidx/collection/FloatList;->_size:I
+
+    .line 55
+    .line 56
+    sub-int/2addr p1, v1
+
+    .line 57
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 58
+    .line 59
+    .line 60
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 61
+    .line 62
+    .line 63
+    move-result-object p1
+
+    .line 64
+    invoke-direct {v0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    .line 65
+    .line 66
+    .line 67
+    throw v0
+    .line 68
+    .line 69
+    .line 70
+    .line 71
+    .line 72
+    .line 73
+    .line 74
+    .line 75
+    .line 76
+    .line 77
+    .line 78
+    .line 79
+    .line 80
+    .line 81
+    .line 82
+    .line 83
+    .line 84
+    .line 85
+    .line 86
+    .line 87
+    .line 88
+    .line 89
+    .line 90
+    .line 91
+    .line 92
+    .line 93
+    .line 94
+    .line 95
+    .line 96
+    .line 97
+    .line 98
+    .line 99
+    .line 100
+    .line 101
+    .line 102
+    .line 103
+    .line 104
+    .line 105
+    .line 106
+.end method
+
+.method public final removeRange(II)V
+    .locals 4
+    .param p1    # I
+        .annotation build Landroidx/annotation/IntRange;
+            from = 0x0L
+        .end annotation
+    .end param
+    .param p2    # I
+        .annotation build Landroidx/annotation/IntRange;
+            from = 0x0L
+        .end annotation
+    .end param
+
+    .line 1
+    const/4 v0, 0x1
+
+    .line 2
+    const/4 v1, 0x0
+
+    .line 3
+    if-ltz p1, :cond_0
+
+    .line 4
+    .line 5
+    iget v2, p0, Landroidx/collection/FloatList;->_size:I
+
+    .line 6
+    .line 7
+    if-gt p1, v2, :cond_0
+
+    .line 8
+    .line 9
+    move v2, v0
+
+    .line 10
+    goto :goto_0
+
+    .line 11
+    :cond_0
+    move v2, v1
+
+    .line 12
+    :goto_0
+    const-string v3, "Start ("
+
+    .line 13
+    .line 14
+    if-eqz v2, :cond_5
+
+    .line 15
+    .line 16
+    if-ltz p2, :cond_1
+
+    .line 17
+    .line 18
+    iget v2, p0, Landroidx/collection/FloatList;->_size:I
+
+    .line 19
+    .line 20
+    if-gt p2, v2, :cond_1
+
+    .line 21
+    .line 22
+    goto :goto_1
+
+    .line 23
+    :cond_1
+    move v0, v1
+
+    .line 24
+    :goto_1
+    if-eqz v0, :cond_5
+
+    .line 25
+    .line 26
+    if-lt p2, p1, :cond_4
+
+    .line 27
+    .line 28
+    if-eq p2, p1, :cond_3
+
+    .line 29
+    .line 30
+    iget v0, p0, Landroidx/collection/FloatList;->_size:I
+
+    .line 31
+    .line 32
+    if-ge p2, v0, :cond_2
+
+    .line 33
+    .line 34
+    iget-object v1, p0, Landroidx/collection/FloatList;->content:[F
+
+    .line 35
+    .line 36
+    invoke-static {v1, v1, p1, p2, v0}, Lkotlin/collections/l;->y0([F[FIII)[F
+
+    .line 37
+    .line 38
+    .line 39
+    :cond_2
+    iget v0, p0, Landroidx/collection/FloatList;->_size:I
+
+    .line 40
+    .line 41
+    sub-int/2addr p2, p1
+
+    .line 42
+    sub-int/2addr v0, p2
+
+    .line 43
+    iput v0, p0, Landroidx/collection/FloatList;->_size:I
+
+    .line 44
+    .line 45
+    :cond_3
+    return-void
+
+    .line 46
+    :cond_4
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    .line 47
+    .line 48
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    .line 49
+    .line 50
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    .line 51
+    .line 52
+    .line 53
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 54
+    .line 55
+    .line 56
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 57
+    .line 58
+    .line 59
+    const-string p1, ") is more than end ("
+
+    .line 60
+    .line 61
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 62
+    .line 63
+    .line 64
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 65
+    .line 66
+    .line 67
+    const/16 p1, 0x29
+
+    .line 68
+    .line 69
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    .line 70
+    .line 71
+    .line 72
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 73
+    .line 74
+    .line 75
+    move-result-object p1
+
+    .line 76
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    .line 77
+    .line 78
+    .line 79
+    throw v0
+
+    .line 80
+    :cond_5
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+
+    .line 81
+    .line 82
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    .line 83
+    .line 84
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    .line 85
+    .line 86
+    .line 87
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 88
+    .line 89
+    .line 90
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 91
+    .line 92
+    .line 93
+    const-string p1, ") and end ("
+
+    .line 94
+    .line 95
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 96
+    .line 97
+    .line 98
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 99
+    .line 100
+    .line 101
+    const-string p1, ") must be in 0.."
+
+    .line 102
+    .line 103
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 104
+    .line 105
+    .line 106
+    iget p1, p0, Landroidx/collection/FloatList;->_size:I
+
+    .line 107
+    .line 108
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 109
+    .line 110
+    .line 111
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 112
+    .line 113
+    .line 114
+    move-result-object p1
+
+    .line 115
+    invoke-direct {v0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    .line 116
+    .line 117
+    .line 118
+    throw v0
+    .line 119
+    .line 120
+    .line 121
+    .line 122
+    .line 123
+    .line 124
+    .line 125
+    .line 126
+    .line 127
+    .line 128
+    .line 129
+    .line 130
+    .line 131
+    .line 132
+    .line 133
+    .line 134
+    .line 135
+    .line 136
+    .line 137
+    .line 138
+    .line 139
+    .line 140
+    .line 141
+    .line 142
+    .line 143
+    .line 144
+    .line 145
+    .line 146
+    .line 147
+    .line 148
+    .line 149
+    .line 150
+    .line 151
+    .line 152
+    .line 153
+    .line 154
+    .line 155
+    .line 156
+    .line 157
+    .line 158
+    .line 159
+    .line 160
+    .line 161
+    .line 162
+    .line 163
+    .line 164
+    .line 165
+    .line 166
+    .line 167
+    .line 168
+    .line 169
+    .line 170
+    .line 171
+    .line 172
+    .line 173
+    .line 174
+    .line 175
+    .line 176
+    .line 177
+    .line 178
+    .line 179
+    .line 180
+    .line 181
+    .line 182
+    .line 183
+    .line 184
+    .line 185
+    .line 186
+    .line 187
+    .line 188
+    .line 189
+    .line 190
+    .line 191
+    .line 192
+    .line 193
+    .line 194
+    .line 195
+    .line 196
+    .line 197
+    .line 198
+    .line 199
+    .line 200
+    .line 201
+    .line 202
+    .line 203
+    .line 204
+    .line 205
+    .line 206
+    .line 207
+    .line 208
+    .line 209
+    .line 210
+    .line 211
+    .line 212
+    .line 213
+    .line 214
+    .line 215
+    .line 216
+    .line 217
+    .line 218
+    .line 219
+    .line 220
+    .line 221
+    .line 222
+    .line 223
+    .line 224
+    .line 225
+    .line 226
+    .line 227
+    .line 228
+    .line 229
+    .line 230
+    .line 231
+    .line 232
+    .line 233
+    .line 234
+    .line 235
+    .line 236
+    .line 237
+    .line 238
+    .line 239
+    .line 240
+    .line 241
+    .line 242
+    .line 243
+    .line 244
+    .line 245
+    .line 246
+    .line 247
+    .line 248
+    .line 249
+    .line 250
+    .line 251
+    .line 252
+    .line 253
+    .line 254
+    .line 255
+    .line 256
+    .line 257
+    .line 258
+    .line 259
+    .line 260
+    .line 261
+    .line 262
+    .line 263
+    .line 264
+    .line 265
+    .line 266
+    .line 267
+    .line 268
+    .line 269
+    .line 270
+    .line 271
+    .line 272
+    .line 273
+    .line 274
+    .line 275
+    .line 276
+    .line 277
+    .line 278
+    .line 279
+    .line 280
+    .line 281
+    .line 282
+    .line 283
+    .line 284
+    .line 285
+    .line 286
+    .line 287
+    .line 288
+    .line 289
+    .line 290
+    .line 291
+    .line 292
+    .line 293
+    .line 294
+    .line 295
+    .line 296
+    .line 297
+    .line 298
+    .line 299
+    .line 300
+    .line 301
+    .line 302
+    .line 303
+    .line 304
+    .line 305
+    .line 306
+    .line 307
+    .line 308
+    .line 309
+    .line 310
+    .line 311
+    .line 312
+    .line 313
+    .line 314
+    .line 315
+    .line 316
+    .line 317
+    .line 318
+    .line 319
+    .line 320
+    .line 321
+    .line 322
+    .line 323
+    .line 324
+    .line 325
+    .line 326
+    .line 327
+    .line 328
+    .line 329
+    .line 330
+    .line 331
+    .line 332
+    .line 333
+    .line 334
+    .line 335
+    .line 336
+    .line 337
+    .line 338
+    .line 339
+    .line 340
+    .line 341
+    .line 342
+    .line 343
+    .line 344
+    .line 345
+    .line 346
+    .line 347
+    .line 348
+    .line 349
+    .line 350
+    .line 351
+    .line 352
+    .line 353
+    .line 354
+    .line 355
+    .line 356
+    .line 357
+    .line 358
+    .line 359
+    .line 360
+    .line 361
+    .line 362
+    .line 363
+    .line 364
+    .line 365
+    .line 366
+    .line 367
+    .line 368
+    .line 369
+    .line 370
+    .line 371
+    .line 372
+    .line 373
+    .line 374
+    .line 375
+    .line 376
+    .line 377
+    .line 378
+    .line 379
+    .line 380
+    .line 381
+    .line 382
+    .line 383
+    .line 384
+    .line 385
+    .line 386
+    .line 387
+    .line 388
+    .line 389
+    .line 390
+    .line 391
+    .line 392
+    .line 393
+    .line 394
+.end method
+
+.method public final retainAll(Landroidx/collection/FloatList;)Z
+    .locals 4
+    .param p1    # Landroidx/collection/FloatList;
+        .annotation build Lp4/l;
+        .end annotation
+    .end param
+
+    const-string v0, "elements"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 8
+    iget v0, p0, Landroidx/collection/FloatList;->_size:I
+
+    .line 9
+    iget-object v1, p0, Landroidx/collection/FloatList;->content:[F
+
+    add-int/lit8 v2, v0, -0x1
+
+    :goto_0
+    const/4 v3, -0x1
+
+    if-ge v3, v2, :cond_1
+
+    .line 10
+    aget v3, v1, v2
+
+    .line 11
+    invoke-virtual {p1, v3}, Landroidx/collection/FloatList;->contains(F)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    .line 12
+    invoke-virtual {p0, v2}, Landroidx/collection/MutableFloatList;->removeAt(I)F
+
+    :cond_0
+    add-int/lit8 v2, v2, -0x1
+
+    goto :goto_0
+
+    .line 13
+    :cond_1
+    iget p1, p0, Landroidx/collection/FloatList;->_size:I
+
+    if-eq v0, p1, :cond_2
+
+    const/4 p1, 0x1
+
+    goto :goto_1
+
+    :cond_2
+    const/4 p1, 0x0
+
+    :goto_1
+    return p1
+.end method
+
+.method public final retainAll([F)Z
+    .locals 10
+    .param p1    # [F
+        .annotation build Lp4/l;
+        .end annotation
+    .end param
+
+    const-string v0, "elements"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    iget v0, p0, Landroidx/collection/FloatList;->_size:I
+
+    .line 2
+    iget-object v1, p0, Landroidx/collection/FloatList;->content:[F
+
+    add-int/lit8 v2, v0, -0x1
+
+    :goto_0
+    const/4 v3, 0x0
+
+    const/4 v4, -0x1
+
+    const/4 v5, 0x1
+
+    if-ge v4, v2, :cond_4
+
+    .line 3
+    aget v6, v1, v2
+
+    .line 4
+    array-length v7, p1
+
+    move v8, v3
+
+    :goto_1
+    if-ge v8, v7, :cond_2
+
+    .line 5
+    aget v9, p1, v8
+
+    cmpg-float v9, v9, v6
+
+    if-nez v9, :cond_0
+
+    move v9, v5
+
+    goto :goto_2
+
+    :cond_0
+    move v9, v3
+
+    :goto_2
+    if-eqz v9, :cond_1
+
+    move v4, v8
+
+    goto :goto_3
+
+    :cond_1
+    add-int/lit8 v8, v8, 0x1
+
+    goto :goto_1
+
+    :cond_2
+    :goto_3
+    if-gez v4, :cond_3
+
+    .line 6
+    invoke-virtual {p0, v2}, Landroidx/collection/MutableFloatList;->removeAt(I)F
+
+    :cond_3
+    add-int/lit8 v2, v2, -0x1
+
+    goto :goto_0
+
+    .line 7
+    :cond_4
+    iget p1, p0, Landroidx/collection/FloatList;->_size:I
+
+    if-eq v0, p1, :cond_5
+
+    move v3, v5
+
+    :cond_5
+    return v3
+.end method
+
+.method public final set(IF)F
+    .locals 3
+    .param p1    # I
+        .annotation build Landroidx/annotation/IntRange;
+            from = 0x0L
+        .end annotation
+    .end param
+
+    .line 1
+    const/4 v0, 0x1
+
+    .line 2
+    const/4 v1, 0x0
+
+    .line 3
+    if-ltz p1, :cond_0
+
+    .line 4
+    .line 5
+    iget v2, p0, Landroidx/collection/FloatList;->_size:I
+
+    .line 6
+    .line 7
+    if-ge p1, v2, :cond_0
+
+    .line 8
+    .line 9
+    move v1, v0
+
+    .line 10
+    :cond_0
+    if-eqz v1, :cond_1
+
+    .line 11
+    .line 12
+    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
+
+    .line 13
+    .line 14
+    aget v1, v0, p1
+
+    .line 15
+    .line 16
+    aput p2, v0, p1
+
+    .line 17
+    .line 18
+    return v1
+
+    .line 19
+    :cond_1
+    new-instance p2, Ljava/lang/IndexOutOfBoundsException;
+
+    .line 20
+    .line 21
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    .line 22
+    .line 23
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    .line 24
+    .line 25
+    .line 26
+    const-string v2, "set index "
+
+    .line 27
+    .line 28
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 32
+    .line 33
+    .line 34
+    const-string p1, " must be between 0 .. "
+
+    .line 35
+    .line 36
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 37
+    .line 38
+    .line 39
+    iget p1, p0, Landroidx/collection/FloatList;->_size:I
+
+    .line 40
+    .line 41
+    sub-int/2addr p1, v0
+
+    .line 42
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 43
+    .line 44
+    .line 45
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 46
+    .line 47
+    .line 48
+    move-result-object p1
+
+    .line 49
+    invoke-direct {p2, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    .line 50
+    .line 51
+    .line 52
+    throw p2
+    .line 53
+    .line 54
+    .line 55
+    .line 56
+    .line 57
+    .line 58
+    .line 59
+    .line 60
+    .line 61
+    .line 62
+    .line 63
+    .line 64
+    .line 65
+.end method
+
+.method public final sort()V
+    .locals 3
+
+    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
+
+    const/4 v1, 0x0
+
+    iget v2, p0, Landroidx/collection/FloatList;->_size:I
+
+    invoke-static {v0, v1, v2}, Lkotlin/collections/l;->N3([FII)V
+
+    return-void
+.end method
+
+.method public final sortDescending()V
+    .locals 3
+
+    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
+
+    const/4 v1, 0x0
+
+    iget v2, p0, Landroidx/collection/FloatList;->_size:I
+
+    invoke-static {v0, v1, v2}, Lkotlin/collections/l;->xu([FII)V
+
+    return-void
+.end method
+
+.method public final trim(I)V
+    .locals 2
+
+    .line 1
+    iget v0, p0, Landroidx/collection/FloatList;->_size:I
+
+    .line 2
+    .line 3
+    invoke-static {p1, v0}, Ljava/lang/Math;->max(II)I
+
+    .line 4
+    .line 5
+    .line 6
+    move-result p1
+
+    .line 7
+    iget-object v0, p0, Landroidx/collection/FloatList;->content:[F
+
+    .line 8
+    .line 9
+    array-length v1, v0
+
+    .line 10
+    if-le v1, p1, :cond_0
+
+    .line 11
+    .line 12
+    invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([FI)[F
+
+    .line 13
+    .line 14
+    .line 15
+    move-result-object p1
+
+    .line 16
+    const-string v0, "copyOf(this, newSize)"
+
+    .line 17
+    .line 18
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 19
+    .line 20
+    .line 21
+    iput-object p1, p0, Landroidx/collection/FloatList;->content:[F
+
+    .line 22
+    .line 23
+    :cond_0
+    return-void
+    .line 24
+    .line 25
+    .line 26
+    .line 27
+    .line 28
+    .line 29
+    .line 30
+    .line 31
+    .line 32
+.end method

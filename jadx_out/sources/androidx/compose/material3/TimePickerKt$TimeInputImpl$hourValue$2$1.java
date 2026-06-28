@@ -1,0 +1,29 @@
+package androidx.compose.material3;
+
+import androidx.compose.runtime.MutableState;
+import androidx.compose.runtime.SnapshotStateKt__SnapshotStateKt;
+import androidx.compose.ui.text.TextRange;
+import androidx.compose.ui.text.input.TextFieldValue;
+
+/* JADX INFO: Access modifiers changed from: package-private */
+@kotlin.i0(d1 = {"\u0000\f\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\u0010\u0000\u001a\b\u0012\u0004\u0012\u00020\u00020\u0001H\n¢\u0006\u0002\b\u0003"}, d2 = {"<anonymous>", "Landroidx/compose/runtime/MutableState;", "Landroidx/compose/ui/text/input/TextFieldValue;", "invoke"}, k = 3, mv = {1, 8, 0}, xi = 48)
+/* loaded from: classes.dex */
+public final class TimePickerKt$TimeInputImpl$hourValue$2$1 extends kotlin.jvm.internal.n0 implements v3.a<MutableState<TextFieldValue>> {
+    final /* synthetic */ TimePickerState $state;
+
+    /* JADX INFO: Access modifiers changed from: package-private */
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public TimePickerKt$TimeInputImpl$hourValue$2$1(TimePickerState timePickerState) {
+        super(0);
+        this.$state = timePickerState;
+    }
+
+    /* JADX WARN: Can't rename method to resolve collision */
+    @Override // v3.a
+    @p4.l
+    public final MutableState<TextFieldValue> invoke() {
+        MutableState<TextFieldValue> mutableStateOf$default;
+        mutableStateOf$default = SnapshotStateKt__SnapshotStateKt.mutableStateOf$default(new TextFieldValue(ActualJvm_jvmKt.toLocalString$default(this.$state.getHourForDisplay$material3_release(), 2, 0, false, 6, null), 0L, (TextRange) null, 6, (kotlin.jvm.internal.w) null), null, 2, null);
+        return mutableStateOf$default;
+    }
+}

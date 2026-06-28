@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/menu_white_bg" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="start|center" android:orientation="horizontal" android:id="@id/menu_manager" android:layout_width="fill_parent" android:layout_height="48.0dip" android:paddingStart="@dimen/dp10" android:paddingEnd="30.0dip">
+        <ImageView android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@mipmap/menu_manager" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/gray3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="应用管理" android:layout_marginStart="7.0dip" />
+    </LinearLayout>
+    <View android:background="@color/gray4" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginStart="40.0dip" android:layout_marginEnd="10.0dip" />
+    <LinearLayout android:gravity="start|center" android:orientation="horizontal" android:id="@id/menu_qick_clone" android:layout_width="wrap_content" android:layout_height="48.0dip" android:paddingStart="@dimen/dp10" android:paddingEnd="30.0dip">
+        <ImageView android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@mipmap/menu_quick_clone" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/gray3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/menu_quick_clone" android:layout_marginStart="7.0dip" />
+    </LinearLayout>
+    <View android:background="@color/gray4" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginStart="40.0dip" android:layout_marginEnd="10.0dip" />
+    <LinearLayout android:gravity="start|center" android:orientation="horizontal" android:id="@id/menu_delete" android:layout_width="fill_parent" android:layout_height="48.0dip" android:paddingStart="@dimen/dp10" android:paddingEnd="30.0dip">
+        <ImageView android:padding="4.0dip" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@mipmap/menu_delete" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/gray3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/menu_delete" android:layout_marginStart="7.0dip" />
+    </LinearLayout>
+    <View android:background="@color/gray4" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginStart="40.0dip" android:layout_marginEnd="10.0dip" />
+    <LinearLayout android:gravity="start|center" android:orientation="horizontal" android:id="@id/menu_note" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="48.0dip" android:paddingStart="@dimen/dp10" android:paddingEnd="30.0dip">
+        <ImageView android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/menu_note" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/gray3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/menu_note" android:layout_marginStart="7.0dip" />
+    </LinearLayout>
+    <View android:background="@color/gray4" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginStart="40.0dip" android:layout_marginEnd="10.0dip" />
+    <LinearLayout android:gravity="start|center" android:orientation="horizontal" android:id="@id/menu_sort" android:layout_width="fill_parent" android:layout_height="48.0dip" android:paddingStart="@dimen/dp10" android:paddingEnd="30.0dip">
+        <ImageView android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@mipmap/menu_sort" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/gray3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/menu_sort" android:layout_marginStart="7.0dip" />
+    </LinearLayout>
+    <View android:background="@color/gray4" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginStart="40.0dip" android:layout_marginEnd="10.0dip" />
+    <LinearLayout android:gravity="start|center" android:orientation="horizontal" android:id="@id/menu_set_pwd" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="48.0dip" android:paddingStart="@dimen/dp10" android:paddingEnd="30.0dip">
+        <ImageView android:padding="3.0dip" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@mipmap/menu_pwd" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/gray3" android:id="@id/set_pwd_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/menu_pwd" android:layout_marginStart="7.0dip" />
+    </LinearLayout>
+    <View android:background="@color/gray4" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginStart="40.0dip" android:layout_marginEnd="10.0dip" />
+    <LinearLayout android:gravity="start|center" android:orientation="horizontal" android:id="@id/menu_create_short" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="48.0dip" android:paddingStart="@dimen/dp10" android:paddingEnd="30.0dip">
+        <ImageView android:padding="4.0dip" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@mipmap/menu_short_cut" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/gray3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/create_shortcut" android:maxLines="1" android:layout_marginStart="7.0dip" />
+    </LinearLayout>
+</LinearLayout>

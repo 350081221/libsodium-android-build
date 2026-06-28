@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:textSize="14.0sp" android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/item_file" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?android:selectableItemBackground"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_zip" android:layout_marginStart="@dimen/dp16" />
+    <TextView android:textSize="12.0sp" android:textColor="@color/gray3" android:ellipsize="middle" android:id="@id/tv_name" android:paddingTop="@dimen/dp16" android:paddingBottom="@dimen/dp16" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="name" android:singleLine="true" android:paddingStart="@dimen/dp10" android:paddingEnd="@dimen/dp10" />
+</LinearLayout>

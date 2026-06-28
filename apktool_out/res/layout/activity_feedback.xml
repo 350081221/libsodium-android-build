@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <EditText android:theme="@style/MyEditText" android:layout_gravity="center_vertical" android:id="@id/et_feed" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="5.0dip" android:hint="@string/text_feedback_hint" android:maxLines="10" android:minLines="4" android:textCursorDrawable="@drawable/bg_et" />
+        <Button android:textColor="#ffffffff" android:id="@id/bt_feedback" android:background="@drawable/ensure_button_bg" android:layout_width="fill_parent" android:layout_height="42.0dip" android:layout_marginLeft="40.0dip" android:layout_marginTop="40.0dip" android:layout_marginRight="40.0dip" android:text="@string/text_feed_back" />
+    </LinearLayout>
+    <com.bytedance.tools.ui.view.DoubleColorBallAnimationView android:layout_gravity="center" android:id="@id/live_loading" android:visibility="gone" android:layout_width="70.0dip" android:layout_height="70.0dip" />
+</FrameLayout>

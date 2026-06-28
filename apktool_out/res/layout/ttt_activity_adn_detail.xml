@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/ttt_activity_base_header" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="14.0sp" android:textColor="@color/ttt_color_999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="16.0dip" android:text="接入详情" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="80.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip">
+                <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/ttt_color_333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="系统类型" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/ttt_color_666" android:layout_gravity="center_vertical" android:id="@id/os" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="Android" />
+                <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            </LinearLayout>
+            <View android:background="#ffebebeb" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="80.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip">
+                <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/ttt_color_333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="App ID" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/ttt_color_666" android:layout_gravity="center_vertical" android:id="@id/app_id" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" />
+                <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            </LinearLayout>
+            <View android:background="#ffebebeb" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="80.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip">
+                <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/ttt_color_333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="App Key" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/ttt_color_666" android:layout_gravity="center_vertical" android:id="@id/app_key" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="2.7.0.0" />
+                <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            </LinearLayout>
+            <View android:background="#ffebebeb" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="80.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip">
+                <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/ttt_color_333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SDK版本号" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/ttt_color_666" android:layout_gravity="center_vertical" android:id="@id/msdk_version" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="2.7.0.0" />
+                <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            </LinearLayout>
+            <View android:background="#ffebebeb" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip">
+                <View android:layout_width="fill_parent" android:layout_height="12.0dip" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/ttt_color_333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ADN SDK版本号" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/ttt_color_666" android:layout_gravity="center_vertical" android:id="@id/adn_version" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:drawableLeft="@drawable/ttt_alert_selector" android:drawablePadding="8.0dip" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/ttt_color_999" android:id="@id/adn_no_fit" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="当前ADN SDK版本不在建议的版本范围内" />
+                <View android:layout_width="fill_parent" android:layout_height="12.0dip" />
+            </LinearLayout>
+            <View android:background="#ffebebeb" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip">
+                <View android:layout_width="fill_parent" android:layout_height="12.0dip" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/ttt_color_333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Adapter" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/ttt_color_666" android:layout_gravity="center_vertical" android:id="@id/adapter_version" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:drawableLeft="@drawable/ttt_alert_selector" android:drawablePadding="8.0dip" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/ttt_color_999" android:id="@id/adapter_no_fit" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="当前Adapter版本不在建议的版本范围内" />
+                <View android:layout_width="fill_parent" android:layout_height="12.0dip" />
+            </LinearLayout>
+            <View android:background="#ffebebeb" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="80.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip">
+                <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/ttt_color_333" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Manifest" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/ttt_color_666" android:layout_gravity="center_vertical" android:id="@id/manifest_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:includeFontPadding="false" android:drawableLeft="@drawable/ttt_alert_selector" android:drawablePadding="8.0dip" />
+                <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            </LinearLayout>
+            <View android:background="#ffebebeb" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

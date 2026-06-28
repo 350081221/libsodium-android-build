@@ -1,0 +1,7 @@
+package com.airbnb.lottie.compose;
+
+/* loaded from: classes2.dex */
+public final class q {
+    private q() {
+    }
+}

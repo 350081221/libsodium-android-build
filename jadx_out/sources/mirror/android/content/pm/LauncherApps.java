@@ -1,0 +1,15 @@
+package mirror.android.content.pm;
+
+import android.content.pm.PackageManager;
+import android.os.IInterface;
+import mirror.RefClass;
+import mirror.RefObject;
+import mirror.com.android.internal.os.UserManager;
+
+/* loaded from: classes4.dex */
+public class LauncherApps {
+    public static Class<?> TYPE = RefClass.load((Class<?>) LauncherApps.class, "android.content.pm.LauncherApps");
+    public static RefObject<PackageManager> mPm;
+    public static RefObject<IInterface> mService;
+    public static RefObject<UserManager> mUserManager;
+}

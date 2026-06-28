@@ -1,0 +1,69 @@
+.class public final Lcom/umeng/cconfig/c/c;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# static fields
+.field private static a:I = 0x8
+
+.field private static b:I = 0x40
+
+.field private static c:I = 0x5
+
+.field private static d:Ljava/util/concurrent/BlockingQueue;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/concurrent/BlockingQueue<",
+            "Ljava/lang/Runnable;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private static e:Ljava/util/concurrent/ThreadPoolExecutor;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 9
+
+    new-instance v0, Ljava/util/concurrent/ArrayBlockingQueue;
+
+    const/16 v1, 0x40
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/ArrayBlockingQueue;-><init>(I)V
+
+    sput-object v0, Lcom/umeng/cconfig/c/c;->d:Ljava/util/concurrent/BlockingQueue;
+
+    new-instance v0, Ljava/util/concurrent/ThreadPoolExecutor;
+
+    sget v3, Lcom/umeng/cconfig/c/c;->a:I
+
+    sget v4, Lcom/umeng/cconfig/c/c;->b:I
+
+    sget v1, Lcom/umeng/cconfig/c/c;->c:I
+
+    int-to-long v5, v1
+
+    sget-object v7, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    sget-object v8, Lcom/umeng/cconfig/c/c;->d:Ljava/util/concurrent/BlockingQueue;
+
+    move-object v2, v0
+
+    invoke-direct/range {v2 .. v8}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;)V
+
+    sput-object v0, Lcom/umeng/cconfig/c/c;->e:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    return-void
+.end method
+
+.method public static a(Ljava/lang/Runnable;)V
+    .locals 1
+
+    sget-object v0, Lcom/umeng/cconfig/c/c;->e:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/ThreadPoolExecutor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+.end method

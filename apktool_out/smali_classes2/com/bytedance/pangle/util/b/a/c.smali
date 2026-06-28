@@ -1,0 +1,254 @@
+.class public final Lcom/bytedance/pangle/util/b/a/c;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# instance fields
+.field public final a:[B
+
+.field private final b:[B
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 v0, 0x2
+
+    .line 5
+    new-array v0, v0, [B
+
+    .line 6
+    .line 7
+    iput-object v0, p0, Lcom/bytedance/pangle/util/b/a/c;->a:[B
+
+    .line 8
+    .line 9
+    const/4 v0, 0x4
+
+    .line 10
+    new-array v0, v0, [B
+
+    .line 11
+    .line 12
+    iput-object v0, p0, Lcom/bytedance/pangle/util/b/a/c;->b:[B
+
+    .line 13
+    .line 14
+    return-void
+    .line 15
+    .line 16
+    .line 17
+    .line 18
+    .line 19
+    .line 20
+    .line 21
+.end method
+
+.method private static a([B)I
+    .locals 2
+
+    const/4 v0, 0x0
+
+    .line 7
+    aget-byte v0, p0, v0
+
+    and-int/lit16 v0, v0, 0xff
+
+    const/4 v1, 0x1
+
+    aget-byte p0, p0, v1
+
+    and-int/lit16 p0, p0, 0xff
+
+    shl-int/lit8 p0, p0, 0x8
+
+    or-int/2addr p0, v0
+
+    return p0
+.end method
+
+.method public static a([BI)V
+    .locals 2
+
+    ushr-int/lit8 v0, p1, 0x8
+
+    int-to-byte v0, v0
+
+    const/4 v1, 0x1
+
+    .line 8
+    aput-byte v0, p0, v1
+
+    and-int/lit16 p1, p1, 0xff
+
+    int-to-byte p1, p1
+
+    const/4 v0, 0x0
+
+    .line 9
+    aput-byte p1, p0, v0
+
+    return-void
+.end method
+
+.method private static b([B)I
+    .locals 3
+
+    const/4 v0, 0x0
+
+    .line 3
+    aget-byte v0, p0, v0
+
+    and-int/lit16 v0, v0, 0xff
+
+    const/4 v1, 0x1
+
+    aget-byte v1, p0, v1
+
+    and-int/lit16 v1, v1, 0xff
+
+    shl-int/lit8 v1, v1, 0x8
+
+    or-int/2addr v0, v1
+
+    const/4 v1, 0x2
+
+    aget-byte v1, p0, v1
+
+    and-int/lit16 v1, v1, 0xff
+
+    const/4 v2, 0x3
+
+    aget-byte p0, p0, v2
+
+    and-int/lit16 p0, p0, 0xff
+
+    shl-int/lit8 p0, p0, 0x8
+
+    or-int/2addr p0, v1
+
+    shl-int/lit8 p0, p0, 0x10
+
+    or-int/2addr p0, v0
+
+    return p0
+.end method
+
+.method private static b([BI)V
+    .locals 2
+
+    ushr-int/lit8 v0, p1, 0x18
+
+    int-to-byte v0, v0
+
+    const/4 v1, 0x3
+
+    .line 4
+    aput-byte v0, p0, v1
+
+    ushr-int/lit8 v0, p1, 0x10
+
+    int-to-byte v0, v0
+
+    const/4 v1, 0x2
+
+    .line 5
+    aput-byte v0, p0, v1
+
+    ushr-int/lit8 v0, p1, 0x8
+
+    int-to-byte v0, v0
+
+    const/4 v1, 0x1
+
+    .line 6
+    aput-byte v0, p0, v1
+
+    and-int/lit16 p1, p1, 0xff
+
+    int-to-byte p1, p1
+
+    const/4 v0, 0x0
+
+    .line 7
+    aput-byte p1, p0, v0
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/io/RandomAccessFile;)I
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/bytedance/pangle/util/b/a/c;->b:[B
+
+    invoke-virtual {p1, v0}, Ljava/io/RandomAccessFile;->readFully([B)V
+
+    .line 2
+    iget-object p1, p0, Lcom/bytedance/pangle/util/b/a/c;->b:[B
+
+    invoke-static {p1}, Lcom/bytedance/pangle/util/b/a/c;->b([B)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final a(Ljava/io/ByteArrayOutputStream;I)V
+    .locals 1
+
+    .line 3
+    iget-object v0, p0, Lcom/bytedance/pangle/util/b/a/c;->a:[B
+
+    invoke-static {v0, p2}, Lcom/bytedance/pangle/util/b/a/c;->a([BI)V
+
+    .line 4
+    iget-object p2, p0, Lcom/bytedance/pangle/util/b/a/c;->a:[B
+
+    invoke-virtual {p1, p2}, Ljava/io/OutputStream;->write([B)V
+
+    return-void
+.end method
+
+.method public final a(Ljava/io/OutputStream;I)V
+    .locals 1
+
+    .line 5
+    iget-object v0, p0, Lcom/bytedance/pangle/util/b/a/c;->b:[B
+
+    invoke-static {v0, p2}, Lcom/bytedance/pangle/util/b/a/c;->b([BI)V
+
+    .line 6
+    iget-object p2, p0, Lcom/bytedance/pangle/util/b/a/c;->b:[B
+
+    invoke-virtual {p1, p2}, Ljava/io/OutputStream;->write([B)V
+
+    return-void
+.end method
+
+.method public final b(Ljava/io/RandomAccessFile;)I
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/bytedance/pangle/util/b/a/c;->a:[B
+
+    invoke-virtual {p1, v0}, Ljava/io/RandomAccessFile;->readFully([B)V
+
+    .line 2
+    iget-object p1, p0, Lcom/bytedance/pangle/util/b/a/c;->a:[B
+
+    invoke-static {p1}, Lcom/bytedance/pangle/util/b/a/c;->a([B)I
+
+    move-result p1
+
+    return p1
+.end method

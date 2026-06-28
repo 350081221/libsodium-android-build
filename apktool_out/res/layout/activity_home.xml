@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/app_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:fab="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="start|center" android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="60.0dip" fab:layout_heightPercent="12.0%">
+            <TextView android:textSize="23.0sp" android:textStyle="bold" android:textColor="@color/gray3" android:gravity="start|center" android:id="@id/tv_content" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/app_name" android:layout_marginStart="@dimen/dp10" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/lay_back" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="60.0dip">
+                <ImageView android:gravity="center_vertical" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@mipmap/back" android:layout_marginStart="@dimen/dp10" />
+                <TextView android:textSize="22.0sp" android:textStyle="bold" android:textColor="@color/gray3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/delete" />
+            </LinearLayout>
+            <LinearLayout android:gravity="end|center" android:orientation="horizontal" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/home_multi_delete" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="60.0dip">
+                    <TextView android:textSize="18.0sp" android:textColor="@color/select_color" android:id="@id/select_num" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:textSize="18.0sp" android:textColor="@color/total_color" android:id="@id/total_num" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <ImageView android:id="@id/home_multi_delete_img" android:padding="18.0dip" android:layout_width="60.0dip" android:layout_height="fill_parent" android:src="@mipmap/menu_delete" />
+                </LinearLayout>
+                <ImageView android:layout_gravity="center" android:id="@id/home_vip" android:padding="15.0dip" android:layout_width="60.0dip" android:layout_height="60.0dip" android:src="@mipmap/vip_icon" />
+                <ImageView android:layout_gravity="center" android:id="@id/home_add" android:padding="15.0dip" android:layout_width="60.0dip" android:layout_height="60.0dip" android:src="@mipmap/add" />
+                <ImageView android:layout_gravity="center" android:id="@id/home_mode" android:padding="15.0dip" android:visibility="gone" android:layout_width="60.0dip" android:layout_height="60.0dip" android:src="@mipmap/ic_login_info" />
+                <ImageView android:layout_gravity="center" android:id="@id/home_menu" android:padding="15.0dip" android:layout_width="60.0dip" android:layout_height="60.0dip" android:src="@mipmap/menu" />
+            </LinearLayout>
+        </LinearLayout>
+        <FrameLayout android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/home_launcher" android:scrollbars="vertical" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <com.airbnb.lottie.LottieAnimationView android:layout_gravity="center" android:id="@id/animation_view" android:layout_width="100.0dip" android:layout_height="100.0dip" android:layout_marginBottom="30.0dip" fab:lottie_autoPlay="true" fab:lottie_loop="true" fab:lottie_rawRes="@raw/adding" />
+        </FrameLayout>
+    </LinearLayout>
+    <TextView android:textSize="24.0sp" android:textColor="@color/gray4" android:layout_gravity="center" android:id="@id/nodata" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp30" android:layout_marginRight="@dimen/dp30" android:text="@string/no_app_tip" android:layout_marginHorizontal="@dimen/dp30" />
+</FrameLayout>

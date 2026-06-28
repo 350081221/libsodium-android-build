@@ -1,0 +1,17 @@
+package androidx.compose.material3;
+
+@kotlin.i0(k = 3, mv = {1, 8, 0}, xi = 48)
+/* loaded from: classes.dex */
+final class NavigationDrawerKt$rememberDrawerState$1 extends kotlin.jvm.internal.n0 implements v3.l<DrawerValue, Boolean> {
+    public static final NavigationDrawerKt$rememberDrawerState$1 INSTANCE = new NavigationDrawerKt$rememberDrawerState$1();
+
+    NavigationDrawerKt$rememberDrawerState$1() {
+        super(1);
+    }
+
+    @Override // v3.l
+    @p4.l
+    public final Boolean invoke(@p4.l DrawerValue drawerValue) {
+        return Boolean.TRUE;
+    }
+}

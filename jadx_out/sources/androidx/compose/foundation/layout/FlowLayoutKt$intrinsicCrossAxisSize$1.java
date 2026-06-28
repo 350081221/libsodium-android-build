@@ -1,0 +1,30 @@
+package androidx.compose.foundation.layout;
+
+import androidx.compose.ui.layout.IntrinsicMeasurable;
+import kotlin.i0;
+import kotlin.jvm.internal.n0;
+import p4.l;
+import v3.q;
+
+@i0(d1 = {"\u0000\u000e\n\u0000\n\u0002\u0010\b\n\u0002\u0018\u0002\n\u0002\b\u0004\u0010\u0000\u001a\u00020\u0001*\u00020\u00022\u0006\u0010\u0003\u001a\u00020\u00012\u0006\u0010\u0004\u001a\u00020\u0001H\n¢\u0006\u0004\b\u0005\u0010\u0006"}, d2 = {"<anonymous>", "", "Landroidx/compose/ui/layout/IntrinsicMeasurable;", "index", "<anonymous parameter 1>", "invoke", "(Landroidx/compose/ui/layout/IntrinsicMeasurable;II)Ljava/lang/Integer;"}, k = 3, mv = {1, 8, 0}, xi = 48)
+/* loaded from: classes.dex */
+final class FlowLayoutKt$intrinsicCrossAxisSize$1 extends n0 implements q<IntrinsicMeasurable, Integer, Integer, Integer> {
+    final /* synthetic */ int[] $mainAxisSizes;
+
+    /* JADX INFO: Access modifiers changed from: package-private */
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public FlowLayoutKt$intrinsicCrossAxisSize$1(int[] iArr) {
+        super(3);
+        this.$mainAxisSizes = iArr;
+    }
+
+    @Override // v3.q
+    public /* bridge */ /* synthetic */ Integer invoke(IntrinsicMeasurable intrinsicMeasurable, Integer num, Integer num2) {
+        return invoke(intrinsicMeasurable, num.intValue(), num2.intValue());
+    }
+
+    @l
+    public final Integer invoke(@l IntrinsicMeasurable intrinsicMeasurable, int i5, int i6) {
+        return Integer.valueOf(this.$mainAxisSizes[i5]);
+    }
+}

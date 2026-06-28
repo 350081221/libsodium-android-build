@@ -1,0 +1,113 @@
+.class final Lkotlinx/coroutines/selects/l$b;
+.super Lkotlin/coroutines/jvm/internal/d;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lkotlinx/coroutines/selects/l;->y(Lkotlin/coroutines/d;)Ljava/lang/Object;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x18
+    name = null
+.end annotation
+
+.annotation runtime Lkotlin/coroutines/jvm/internal/f;
+    c = "kotlinx.coroutines.selects.SelectImplementation"
+    f = "Select.kt"
+    i = {
+        0x0
+    }
+    l = {
+        0x1af,
+        0x1b2
+    }
+    m = "doSelectSuspend"
+    n = {
+        "this"
+    }
+    s = {
+        "L$0"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/i0;
+    k = 0x3
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# instance fields
+.field L$0:Ljava/lang/Object;
+
+.field label:I
+
+.field synthetic result:Ljava/lang/Object;
+
+.field final synthetic this$0:Lkotlinx/coroutines/selects/l;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlinx/coroutines/selects/l<",
+            "TR;>;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method constructor <init>(Lkotlinx/coroutines/selects/l;Lkotlin/coroutines/d;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlinx/coroutines/selects/l<",
+            "TR;>;",
+            "Lkotlin/coroutines/d<",
+            "-",
+            "Lkotlinx/coroutines/selects/l$b;",
+            ">;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lkotlinx/coroutines/selects/l$b;->this$0:Lkotlinx/coroutines/selects/l;
+
+    invoke-direct {p0, p2}, Lkotlin/coroutines/jvm/internal/d;-><init>(Lkotlin/coroutines/d;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+    .param p1    # Ljava/lang/Object;
+        .annotation build Lp4/l;
+        .end annotation
+    .end param
+    .annotation build Lp4/m;
+    .end annotation
+
+    iput-object p1, p0, Lkotlinx/coroutines/selects/l$b;->result:Ljava/lang/Object;
+
+    iget p1, p0, Lkotlinx/coroutines/selects/l$b;->label:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lkotlinx/coroutines/selects/l$b;->label:I
+
+    iget-object p1, p0, Lkotlinx/coroutines/selects/l$b;->this$0:Lkotlinx/coroutines/selects/l;
+
+    invoke-static {p1, p0}, Lkotlinx/coroutines/selects/l;->l(Lkotlinx/coroutines/selects/l;Lkotlin/coroutines/d;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method

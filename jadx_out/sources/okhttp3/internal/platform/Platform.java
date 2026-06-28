@@ -1,0 +1,350 @@
+package okhttp3.internal.platform;
+
+import com.huawei.agconnect.apms.collect.model.EventType;
+import com.huawei.hms.framework.common.hianalytics.CrashHianalyticsData;
+import com.umeng.analytics.pro.bi;
+import com.umeng.analytics.pro.d;
+import java.io.IOException;
+import java.net.InetSocketAddress;
+import java.net.Socket;
+import java.security.GeneralSecurityException;
+import java.security.KeyStore;
+import java.security.Security;
+import java.security.cert.X509Certificate;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLSocket;
+import javax.net.ssl.SSLSocketFactory;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.TrustManagerFactory;
+import javax.net.ssl.X509TrustManager;
+import kotlin.collections.x;
+import kotlin.i0;
+import kotlin.jvm.internal.l0;
+import kotlin.jvm.internal.r1;
+import kotlin.jvm.internal.w;
+import okhttp3.OkHttpClient;
+import okhttp3.Protocol;
+import okhttp3.internal.Util;
+import okhttp3.internal.platform.android.AndroidLog;
+import okhttp3.internal.tls.BasicCertificateChainCleaner;
+import okhttp3.internal.tls.BasicTrustRootIndex;
+import okhttp3.internal.tls.CertificateChainCleaner;
+import okhttp3.internal.tls.TrustRootIndex;
+import p4.l;
+import u3.m;
+
+@i0(d1 = {"\u0000r\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0004\n\u0002\u0010\u0003\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0007\b\u0016\u0018\u0000 02\u00020\u0001:\u00010B\u0007¢\u0006\u0004\b.\u0010/J\u0006\u0010\u0003\u001a\u00020\u0002J\b\u0010\u0005\u001a\u00020\u0004H\u0016J\b\u0010\u0007\u001a\u00020\u0006H\u0016J\u0012\u0010\n\u001a\u0004\u0018\u00010\u00062\u0006\u0010\t\u001a\u00020\bH\u0016J-\u0010\u0013\u001a\u00020\u00122\u0006\u0010\f\u001a\u00020\u000b2\b\u0010\r\u001a\u0004\u0018\u00010\u00022\u0011\u0010\u0011\u001a\r\u0012\t\u0012\u00070\u000f¢\u0006\u0002\b\u00100\u000eH\u0016J\u0010\u0010\u0014\u001a\u00020\u00122\u0006\u0010\f\u001a\u00020\u000bH\u0016J\u0012\u0010\u0015\u001a\u0004\u0018\u00010\u00022\u0006\u0010\f\u001a\u00020\u000bH\u0016J \u0010\u001c\u001a\u00020\u00122\u0006\u0010\u0017\u001a\u00020\u00162\u0006\u0010\u0019\u001a\u00020\u00182\u0006\u0010\u001b\u001a\u00020\u001aH\u0016J&\u0010!\u001a\u00020\u00122\u0006\u0010\u001d\u001a\u00020\u00022\b\b\u0002\u0010\u001e\u001a\u00020\u001a2\n\b\u0002\u0010 \u001a\u0004\u0018\u00010\u001fH\u0016J\u0010\u0010#\u001a\u00020\"2\u0006\u0010\r\u001a\u00020\u0002H\u0016J\u0012\u0010%\u001a\u0004\u0018\u00010\u00012\u0006\u0010$\u001a\u00020\u0002H\u0016J\u001a\u0010'\u001a\u00020\u00122\u0006\u0010\u001d\u001a\u00020\u00022\b\u0010&\u001a\u0004\u0018\u00010\u0001H\u0016J\u0010\u0010)\u001a\u00020(2\u0006\u0010\n\u001a\u00020\u0006H\u0016J\u0010\u0010+\u001a\u00020*2\u0006\u0010\n\u001a\u00020\u0006H\u0016J\u0010\u0010,\u001a\u00020\b2\u0006\u0010\n\u001a\u00020\u0006H\u0016J\b\u0010-\u001a\u00020\u0002H\u0016¨\u00061"}, d2 = {"Lokhttp3/internal/platform/Platform;", "", "", "getPrefix", "Ljavax/net/ssl/SSLContext;", "newSSLContext", "Ljavax/net/ssl/X509TrustManager;", "platformTrustManager", "Ljavax/net/ssl/SSLSocketFactory;", "sslSocketFactory", "trustManager", "Ljavax/net/ssl/SSLSocket;", "sslSocket", "hostname", "", "Lokhttp3/Protocol;", "Lu3/n;", "protocols", "Lkotlin/r2;", "configureTlsExtensions", "afterHandshake", "getSelectedProtocol", "Ljava/net/Socket;", "socket", "Ljava/net/InetSocketAddress;", "address", "", "connectTimeout", "connectSocket", CrashHianalyticsData.MESSAGE, "level", "", bi.aL, "log", "", "isCleartextTrafficPermitted", "closer", "getStackTraceForCloseable", "stackTrace", "logCloseableLeak", "Lokhttp3/internal/tls/CertificateChainCleaner;", "buildCertificateChainCleaner", "Lokhttp3/internal/tls/TrustRootIndex;", "buildTrustRootIndex", "newSslSocketFactory", "toString", "<init>", "()V", "Companion", "okhttp"}, k = 1, mv = {1, 8, 0})
+/* loaded from: classes4.dex */
+public class Platform {
+
+    @l
+    public static final Companion Companion;
+    public static final int INFO = 4;
+    public static final int WARN = 5;
+    private static final Logger logger;
+
+    @l
+    private static volatile Platform platform;
+
+    @i0(d1 = {"\u0000D\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u0012\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0005\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0007\b\u0086\u0003\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b \u0010!J\b\u0010\u0003\u001a\u00020\u0002H\u0002J\b\u0010\u0004\u001a\u00020\u0002H\u0002J\b\u0010\u0005\u001a\u00020\u0002H\u0002J\b\u0010\u0006\u001a\u00020\u0002H\u0007J\u0010\u0010\t\u001a\u00020\b2\b\b\u0002\u0010\u0007\u001a\u00020\u0002J\u001a\u0010\u000e\u001a\b\u0012\u0004\u0012\u00020\r0\n2\f\u0010\f\u001a\b\u0012\u0004\u0012\u00020\u000b0\nJ\u0014\u0010\u0010\u001a\u00020\u000f2\f\u0010\f\u001a\b\u0012\u0004\u0012\u00020\u000b0\nR\u0014\u0010\u0012\u001a\u00020\u00118BX\u0082\u0004¢\u0006\u0006\u001a\u0004\b\u0012\u0010\u0013R\u0014\u0010\u0014\u001a\u00020\u00118BX\u0082\u0004¢\u0006\u0006\u001a\u0004\b\u0014\u0010\u0013R\u0014\u0010\u0015\u001a\u00020\u00118BX\u0082\u0004¢\u0006\u0006\u001a\u0004\b\u0015\u0010\u0013R\u0011\u0010\u0016\u001a\u00020\u00118F¢\u0006\u0006\u001a\u0004\b\u0016\u0010\u0013R\u0014\u0010\u0018\u001a\u00020\u00178\u0006X\u0086T¢\u0006\u0006\n\u0004\b\u0018\u0010\u0019R\u0014\u0010\u001a\u001a\u00020\u00178\u0006X\u0086T¢\u0006\u0006\n\u0004\b\u001a\u0010\u0019R\u001c\u0010\u001d\u001a\n \u001c*\u0004\u0018\u00010\u001b0\u001b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u001d\u0010\u001eR\u0016\u0010\u0007\u001a\u00020\u00028\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u0007\u0010\u001f¨\u0006\""}, d2 = {"Lokhttp3/internal/platform/Platform$Companion;", "", "Lokhttp3/internal/platform/Platform;", "findPlatform", "findAndroidPlatform", "findJvmPlatform", "get", EventType.PLATFORM, "Lkotlin/r2;", "resetForTests", "", "Lokhttp3/Protocol;", "protocols", "", "alpnProtocolNames", "", "concatLengthPrefixed", "", "isConscryptPreferred", "()Z", "isOpenJSSEPreferred", "isBouncyCastlePreferred", "isAndroid", "", "INFO", "I", "WARN", "Ljava/util/logging/Logger;", "kotlin.jvm.PlatformType", "logger", "Ljava/util/logging/Logger;", "Lokhttp3/internal/platform/Platform;", "<init>", "()V", "okhttp"}, k = 1, mv = {1, 8, 0})
+    @r1({"SMAP\nPlatform.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Platform.kt\nokhttp3/internal/platform/Platform$Companion\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,286:1\n766#2:287\n857#2,2:288\n1549#2:290\n1620#2,3:291\n*S KotlinDebug\n*F\n+ 1 Platform.kt\nokhttp3/internal/platform/Platform$Companion\n*L\n193#1:287\n193#1:288,2\n193#1:290\n193#1:291,3\n*E\n"})
+    /* loaded from: classes4.dex */
+    public static final class Companion {
+        private Companion() {
+        }
+
+        public /* synthetic */ Companion(w wVar) {
+            this();
+        }
+
+        private final Platform findAndroidPlatform() {
+            AndroidLog.INSTANCE.enable();
+            Platform buildIfSupported = Android10Platform.Companion.buildIfSupported();
+            if (buildIfSupported == null) {
+                Platform buildIfSupported2 = AndroidPlatform.Companion.buildIfSupported();
+                l0.m(buildIfSupported2);
+                return buildIfSupported2;
+            }
+            return buildIfSupported;
+        }
+
+        private final Platform findJvmPlatform() {
+            OpenJSSEPlatform buildIfSupported;
+            BouncyCastlePlatform buildIfSupported2;
+            ConscryptPlatform buildIfSupported3;
+            if (isConscryptPreferred() && (buildIfSupported3 = ConscryptPlatform.Companion.buildIfSupported()) != null) {
+                return buildIfSupported3;
+            }
+            if (isBouncyCastlePreferred() && (buildIfSupported2 = BouncyCastlePlatform.Companion.buildIfSupported()) != null) {
+                return buildIfSupported2;
+            }
+            if (isOpenJSSEPreferred() && (buildIfSupported = OpenJSSEPlatform.Companion.buildIfSupported()) != null) {
+                return buildIfSupported;
+            }
+            Jdk9Platform buildIfSupported4 = Jdk9Platform.Companion.buildIfSupported();
+            if (buildIfSupported4 != null) {
+                return buildIfSupported4;
+            }
+            Platform buildIfSupported5 = Jdk8WithJettyBootPlatform.Companion.buildIfSupported();
+            if (buildIfSupported5 != null) {
+                return buildIfSupported5;
+            }
+            return new Platform();
+        }
+
+        /* JADX INFO: Access modifiers changed from: private */
+        public final Platform findPlatform() {
+            if (isAndroid()) {
+                return findAndroidPlatform();
+            }
+            return findJvmPlatform();
+        }
+
+        private final boolean isBouncyCastlePreferred() {
+            return l0.g("BC", Security.getProviders()[0].getName());
+        }
+
+        private final boolean isConscryptPreferred() {
+            return l0.g("Conscrypt", Security.getProviders()[0].getName());
+        }
+
+        private final boolean isOpenJSSEPreferred() {
+            return l0.g("OpenJSSE", Security.getProviders()[0].getName());
+        }
+
+        public static /* synthetic */ void resetForTests$default(Companion companion, Platform platform, int i5, Object obj) {
+            if ((i5 & 1) != 0) {
+                platform = companion.findPlatform();
+            }
+            companion.resetForTests(platform);
+        }
+
+        @l
+        public final List<String> alpnProtocolNames(@l List<? extends Protocol> protocols) {
+            int Y;
+            boolean z4;
+            l0.p(protocols, "protocols");
+            ArrayList arrayList = new ArrayList();
+            for (Object obj : protocols) {
+                if (((Protocol) obj) != Protocol.HTTP_1_0) {
+                    z4 = true;
+                } else {
+                    z4 = false;
+                }
+                if (z4) {
+                    arrayList.add(obj);
+                }
+            }
+            Y = x.Y(arrayList, 10);
+            ArrayList arrayList2 = new ArrayList(Y);
+            Iterator it = arrayList.iterator();
+            while (it.hasNext()) {
+                arrayList2.add(((Protocol) it.next()).toString());
+            }
+            return arrayList2;
+        }
+
+        @l
+        public final byte[] concatLengthPrefixed(@l List<? extends Protocol> protocols) {
+            l0.p(protocols, "protocols");
+            okio.l lVar = new okio.l();
+            for (String str : alpnProtocolNames(protocols)) {
+                lVar.writeByte(str.length());
+                lVar.C(str);
+            }
+            return lVar.c0();
+        }
+
+        @l
+        @m
+        public final Platform get() {
+            return Platform.platform;
+        }
+
+        public final boolean isAndroid() {
+            return l0.g("Dalvik", System.getProperty("java.vm.name"));
+        }
+
+        public final void resetForTests(@l Platform platform) {
+            l0.p(platform, "platform");
+            Platform.platform = platform;
+        }
+    }
+
+    static {
+        Companion companion = new Companion(null);
+        Companion = companion;
+        platform = companion.findPlatform();
+        logger = Logger.getLogger(OkHttpClient.class.getName());
+    }
+
+    @l
+    @m
+    public static final Platform get() {
+        return Companion.get();
+    }
+
+    public static /* synthetic */ void log$default(Platform platform2, String str, int i5, Throwable th, int i6, Object obj) {
+        if (obj != null) {
+            throw new UnsupportedOperationException("Super calls with default arguments not supported in this target, function: log");
+        }
+        if ((i6 & 2) != 0) {
+            i5 = 4;
+        }
+        if ((i6 & 4) != 0) {
+            th = null;
+        }
+        platform2.log(str, i5, th);
+    }
+
+    public void afterHandshake(@l SSLSocket sslSocket) {
+        l0.p(sslSocket, "sslSocket");
+    }
+
+    @l
+    public CertificateChainCleaner buildCertificateChainCleaner(@l X509TrustManager trustManager) {
+        l0.p(trustManager, "trustManager");
+        return new BasicCertificateChainCleaner(buildTrustRootIndex(trustManager));
+    }
+
+    @l
+    public TrustRootIndex buildTrustRootIndex(@l X509TrustManager trustManager) {
+        l0.p(trustManager, "trustManager");
+        X509Certificate[] acceptedIssuers = trustManager.getAcceptedIssuers();
+        l0.o(acceptedIssuers, "trustManager.acceptedIssuers");
+        return new BasicTrustRootIndex((X509Certificate[]) Arrays.copyOf(acceptedIssuers, acceptedIssuers.length));
+    }
+
+    public void configureTlsExtensions(@l SSLSocket sslSocket, @p4.m String str, @l List<Protocol> protocols) {
+        l0.p(sslSocket, "sslSocket");
+        l0.p(protocols, "protocols");
+    }
+
+    public void connectSocket(@l Socket socket2, @l InetSocketAddress address, int i5) throws IOException {
+        l0.p(socket2, "socket");
+        l0.p(address, "address");
+        socket2.connect(address, i5);
+    }
+
+    @l
+    public final String getPrefix() {
+        return "OkHttp";
+    }
+
+    @p4.m
+    public String getSelectedProtocol(@l SSLSocket sslSocket) {
+        l0.p(sslSocket, "sslSocket");
+        return null;
+    }
+
+    @p4.m
+    public Object getStackTraceForCloseable(@l String closer) {
+        l0.p(closer, "closer");
+        if (logger.isLoggable(Level.FINE)) {
+            return new Throwable(closer);
+        }
+        return null;
+    }
+
+    public boolean isCleartextTrafficPermitted(@l String hostname) {
+        l0.p(hostname, "hostname");
+        return true;
+    }
+
+    public void log(@l String message, int i5, @p4.m Throwable th) {
+        Level level;
+        l0.p(message, "message");
+        if (i5 == 5) {
+            level = Level.WARNING;
+        } else {
+            level = Level.INFO;
+        }
+        logger.log(level, message, th);
+    }
+
+    public void logCloseableLeak(@l String message, @p4.m Object obj) {
+        l0.p(message, "message");
+        if (obj == null) {
+            message = message + " To see where this was allocated, set the OkHttpClient logger level to FINE: Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);";
+        }
+        log(message, 5, (Throwable) obj);
+    }
+
+    @l
+    public SSLContext newSSLContext() {
+        SSLContext sSLContext = SSLContext.getInstance("TLS");
+        l0.o(sSLContext, "getInstance(\"TLS\")");
+        return sSLContext;
+    }
+
+    @l
+    public SSLSocketFactory newSslSocketFactory(@l X509TrustManager trustManager) {
+        l0.p(trustManager, "trustManager");
+        try {
+            SSLContext newSSLContext = newSSLContext();
+            newSSLContext.init(null, new TrustManager[]{trustManager}, null);
+            SSLSocketFactory socketFactory = newSSLContext.getSocketFactory();
+            l0.o(socketFactory, "newSSLContext().apply {\n…ll)\n      }.socketFactory");
+            return socketFactory;
+        } catch (GeneralSecurityException e5) {
+            throw new AssertionError("No System TLS: " + e5, e5);
+        }
+    }
+
+    @l
+    public X509TrustManager platformTrustManager() {
+        TrustManagerFactory trustManagerFactory = TrustManagerFactory.getInstance(TrustManagerFactory.getDefaultAlgorithm());
+        trustManagerFactory.init((KeyStore) null);
+        TrustManager[] trustManagers = trustManagerFactory.getTrustManagers();
+        l0.m(trustManagers);
+        boolean z4 = true;
+        if (trustManagers.length != 1 || !(trustManagers[0] instanceof X509TrustManager)) {
+            z4 = false;
+        }
+        if (z4) {
+            TrustManager trustManager = trustManagers[0];
+            l0.n(trustManager, "null cannot be cast to non-null type javax.net.ssl.X509TrustManager");
+            return (X509TrustManager) trustManager;
+        }
+        StringBuilder sb = new StringBuilder();
+        sb.append("Unexpected default trust managers: ");
+        String arrays = Arrays.toString(trustManagers);
+        l0.o(arrays, "toString(this)");
+        sb.append(arrays);
+        throw new IllegalStateException(sb.toString().toString());
+    }
+
+    @l
+    public String toString() {
+        String simpleName = getClass().getSimpleName();
+        l0.o(simpleName, "javaClass.simpleName");
+        return simpleName;
+    }
+
+    @p4.m
+    public X509TrustManager trustManager(@l SSLSocketFactory sslSocketFactory) {
+        l0.p(sslSocketFactory, "sslSocketFactory");
+        try {
+            Class<?> sslContextClass = Class.forName("sun.security.ssl.SSLContextImpl");
+            l0.o(sslContextClass, "sslContextClass");
+            Object readFieldOrNull = Util.readFieldOrNull(sslSocketFactory, sslContextClass, d.X);
+            if (readFieldOrNull == null) {
+                return null;
+            }
+            return (X509TrustManager) Util.readFieldOrNull(readFieldOrNull, X509TrustManager.class, "trustManager");
+        } catch (ClassNotFoundException unused) {
+            return null;
+        } catch (RuntimeException e5) {
+            if (l0.g(e5.getClass().getName(), "java.lang.reflect.InaccessibleObjectException")) {
+                return null;
+            }
+            throw e5;
+        }
+    }
+}
