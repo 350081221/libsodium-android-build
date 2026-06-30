@@ -1,0 +1,53 @@
+name: Convert apksig jar to dex with D8
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "apksig-9.2.1.jar"
+      - ".github/workflows/d8-apksig.yml"
+
+jobs:
+  d8:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install Android build tools
+        run: |
+          sdkmanager "platforms;android-35" "build-tools;35.0.0"
+
+      - name: Run D8 desugar
+        run: |
+          mkdir -p apksig_dex_out
+          "$ANDROID_HOME/build-tools/35.0.0/d8" \
+            --release \
+            --min-api 21 \
+            --lib "$ANDROID_HOME/platforms/android-35/android.jar" \
+            --output apksig_dex_out \
+            apksig-9.2.1.jar
+          ls -l apksig_dex_out
+
+      - name: Rename dex
+        run: |
+          cp apksig_dex_out/classes.dex classes_apksig.dex
+          zip -9 apksig_desugared_dex.zip classes_apksig.dex
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: apksig_desugared_dex
+          path: |
+            classes_apksig.dex
+            apksig_desugared_dex.zip
