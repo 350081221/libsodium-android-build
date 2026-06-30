@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:background="@drawable/start_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:fab="http://schemas.android.com/apk/res-auto">
-    <com.airbnb.lottie.LottieAnimationView android:id="@id/animation_view" android:layout_width="fill_parent" android:layout_height="wrap_content" fab:layout_constraintBottom_toTopOf="@id/animation_view2" fab:layout_constraintLeft_toLeftOf="parent" fab:layout_constraintRight_toRightOf="parent" fab:layout_constraintTop_toTopOf="parent" />
-    <com.airbnb.lottie.LottieAnimationView android:id="@id/animation_view2" android:layout_width="0.0dip" android:layout_height="@dimen/dp10" android:layout_marginBottom="@dimen/dp30" fab:layout_constraintBottom_toTopOf="@id/textView2" fab:layout_constraintLeft_toLeftOf="parent" fab:layout_constraintRight_toRightOf="parent" fab:lottie_autoPlay="false" fab:lottie_rawRes="@raw/progress" />
-    <TextView android:textSize="24.0sp" android:textStyle="bold" android:textColor="@color/white" android:id="@id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp30" android:text="元气多开" fab:layout_constraintBottom_toBottomOf="parent" fab:layout_constraintEnd_toEndOf="parent" fab:layout_constraintStart_toStartOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>

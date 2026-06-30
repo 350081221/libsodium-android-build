@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <RadioGroup android:gravity="center" android:orientation="horizontal" android:id="@id/radio_group" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <RadioButton android:textColor="#ff999999" android:id="@id/open" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="开启" />
-        <RadioButton android:textColor="#ff999999" android:id="@id/close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="关闭" />
-    </RadioGroup>
-</FrameLayout>

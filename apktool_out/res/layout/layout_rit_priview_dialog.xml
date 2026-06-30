@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="bottom" android:orientation="vertical" android:id="@id/rit_detail_preview_input" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <include layout="@layout/layout_rit_priview_dialog_header" />
-    <ListView android:id="@id/preview_dialog_lv" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@null" />
-</LinearLayout>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="horizontal" style="@style/RitDetailContent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="14.0sp" android:textColor="#ff161823" android:id="@id/preview_input_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="测试标题" android:layout_weight="1.0" />
-    <ImageView android:id="@id/icon_ok" android:visibility="invisible" android:layout_width="16.0dip" android:layout_height="11.0dip" android:src="@drawable/icon_ok" />
-</LinearLayout>
