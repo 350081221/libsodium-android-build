@@ -1,6 +1,0 @@
-package com.airbnb.lottie.value;
-
-/* loaded from: classes2.dex */
-public interface l<T> {
-    T a(b<T> bVar);
-}

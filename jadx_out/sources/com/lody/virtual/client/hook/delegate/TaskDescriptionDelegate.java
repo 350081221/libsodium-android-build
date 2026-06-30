@@ -1,8 +1,0 @@
-package com.lody.virtual.client.hook.delegate;
-
-import android.app.ActivityManager;
-
-/* loaded from: classes3.dex */
-public interface TaskDescriptionDelegate {
-    ActivityManager.TaskDescription getTaskDescription(ActivityManager.TaskDescription taskDescription);
-}
